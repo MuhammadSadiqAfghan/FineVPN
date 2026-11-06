@@ -1,0 +1,15 @@
+services:
+  finevpn:
+    build: .
+    image: finevpn:1.0.0
+    container_name: finevpn
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PORT: "8000"
+      DATA_DIR: /data
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./data:/data
