@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+data/
+*.bak
+*.tmp
+cookies*.txt
+panel_secret.key
+.env
+.pytest_cache/
+.coverage
+htmlcov/
