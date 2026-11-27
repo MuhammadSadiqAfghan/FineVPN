@@ -1,0 +1,277 @@
+//profile-title: base64:QW5vbnltb3VzIFNlcnZlcmxlc3M=
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//remote-dns-address: https://dns.cloudflare.com/dns-query
+
+[
+  {
+    "type": "direct",
+    "tag": "Mrg+TCPFrag+OOB",
+    "finalmask": {
+      "tcp": [
+        {
+          "type": "merge",
+          "settings": {
+            "times": 100,
+            "delayMs": 30,
+            "maxBytes": 16384
+          }
+        },
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "1-1",
+            "lengths": [
+              "43"
+            ],
+            "delays": [
+              "30"
+            ],
+            "maxSplit": "2"
+          }
+        },
+        {
+          "type": "oob",
+          "settings": {
+            "bytes": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "direct",
+    "tag": "Mrg+TLSFrag+TCPFrag(1)",
+    "finalmask": {
+      "tcp": [
+        {
+          "type": "merge",
+          "settings": {
+            "times": 100,
+            "delayMs": 30,
+            "maxBytes": 16384
+          }
+        },
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "tlshello",
+            "lengths": [
+              "6",
+              "99",
+              "32-64"
+            ],
+            "delays": [
+              "0"
+            ],
+            "maxSplit": "8"
+          }
+        },
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "1-1",
+            "lengths": [
+              "110-140",
+              "35-55"
+            ],
+            "delays": [
+              "1-2"
+            ],
+            "maxSplit": "4"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "direct",
+    "tag": "Mrg+TLSFrag+TCPFrag(2)",
+    "finalmask": {
+      "tcp": [
+        {
+          "type": "merge",
+          "settings": {
+            "times": 100,
+            "delayMs": 30,
+            "maxBytes": 16384
+          }
+        },
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "tlshello",
+            "lengths": [
+              "5",
+              "105",
+              "48-80"
+            ],
+            "delays": [
+              "0"
+            ],
+            "maxSplit": "7"
+          }
+        },
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "1-1",
+            "lengths": [
+              "125-155",
+              "40-65"
+            ],
+            "delays": [
+              "1-2"
+            ],
+            "maxSplit": "4"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "direct",
+    "tag": "TLSFrag+UDPNoise(E/R)(1)",
+    "finalmask": {
+      "tcp": [
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "tlshello",
+            "lengths": [
+              "100-200"
+            ],
+            "delays": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "udp": [
+        {
+          "type": "noise",
+          "settings": {
+            "reset": "30-60",
+            "noise": [
+              {
+                "type": "exp",
+                "packet": "<b 0x123401000001000000000000076578616d706c6503636f6d0000010001>",
+                "delay": "0"
+              },
+              {
+                "rand": "40-70",
+                "randRange": "0-255",
+                "delay": "0"
+              },
+              {
+                "rand": "40-70",
+                "randRange": "0-255",
+                "delay": "0"
+              },
+              {
+                "rand": "40-70",
+                "randRange": "0-255",
+                "delay": "0"
+              },
+              {
+                "rand": "40-70",
+                "randRange": "0-255",
+                "delay": "0"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "direct",
+    "tag": "TLSFrag+UDPNoise(E/R)(2)",
+    "finalmask": {
+      "tcp": [
+        {
+          "type": "fragment",
+          "settings": {
+            "packets": "tlshello",
+            "lengths": [
+              "120-180"
+            ],
+            "delays": [
+              "0"
+            ]
+          }
+        }
+      ],
+      "udp": [
+        {
+          "type": "noise",
+          "settings": {
+            "reset": "36-54",
+            "noise": [
+              {
+                "type": "exp",
+                "packet": "<b 0x5a2c0100000100000000000003777777076578616d706c65036e65740000010001>",
+                "delay": "0"
+              },
+              {
+                "rand": "45-63",
+                "randRange": "0-255",
+                "delay": "0"
+              },
+              {
+                "rand": "45-63",
+                "randRange": "0-255",
+                "delay": "0"
+              },
+              {
+                "rand": "45-63",
+                "randRange": "0-255",
+                "delay": "0"
+              },
+              {
+                "rand": "45-63",
+                "randRange": "0-255",
+                "delay": "0"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "direct",
+    "tag": "Mrg+Mirage+OOB",
+    "finalmask": {
+      "tcp": [
+        {
+          "type": "merge",
+          "settings": {
+            "times": 100,
+            "delayMs": 30,
+            "maxBytes": 16384
+          }
+        },
+        {
+          "type": "mirage",
+          "settings": {
+            "offset": 5,
+            "layout": "separate"
+          }
+        },
+        {
+          "type": "oob",
+          "settings": {
+            "bytes": [
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
