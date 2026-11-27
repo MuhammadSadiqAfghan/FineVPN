@@ -1,0 +1,589 @@
+import json
+import os
+from datetime import datetime
+
+def generate_basic_svg(stats_data):
+    """Generate a clean FineVPN source-quality chart in black, white and red."""
+    channels = stats_data.get('channels', [])
+    sorted_channels = sorted(channels, key=lambda x: x.get('metrics', {}).get('overall_score', 0), reverse=True)
+    width = 900
+    height = max(150, len(sorted_channels) * 52 + 105)
+    rows = []
+    for idx, channel in enumerate(sorted_channels):
+        metrics = channel.get('metrics', {})
+        y = 82 + idx * 52
+        url = str(channel.get('url', ''))
+        name = _esc(url.split('/')[-1] or url)[:62]
+        score = float(metrics.get('overall_score', 0) or 0)
+        success = (float(metrics.get('success_count', 0)) / max(1, float(metrics.get('success_count', 0)) + float(metrics.get('fail_count', 0)))) * 100
+        bar_width = max(0, min(520, 5.2 * score))
+        rows.append(f'''<text x="28" y="{y+21}" class="row">{name}</text>
+        <rect x="330" y="{y}" width="520" height="28" fill="#1b1b1b" rx="4"/>
+        <rect x="330" y="{y}" width="{bar_width:.1f}" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="{y+19}" class="score">{score:.1f}% · {success:.0f}%</text>''')
+    body = ''.join(rows) if rows else '<text x="450" y="100" text-anchor="middle" class="score">هنوز داده‌ای برای گزارش وجود ندارد</text>'
+    return f'''<?xml version="1.0" encoding="UTF-8"?>
+    <svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#000000"/>
+    <text x="28" y="42" class="title">FineVPN · گزارش کیفیت منابع</text>
+    <style>.title{{font:700 23px Arial,sans-serif;fill:#fff}}.row{{font:13px Arial,sans-serif;fill:#fff}}.score{{font:12px Arial,sans-serif;fill:#fff}}</style>
+    {body}</svg>'''
+def _status_meta(score):
+    if score >= 70:
+        return 'good', 'Healthy'
+    if score >= 50:
+        return 'warn', 'Degraded'
+    if score >= 30:
+        return 'risk', 'At Risk'
+    return 'bad', 'Disabled Range'
+
+def _build_report_dataset(stats_data):
+    channels = stats_data.get('channels', [])
+    history = stats_data.get('history', [])
+    sorted_channels = sorted(channels, key=lambda x: x['metrics']['overall_score'], reverse=True)
+
+    total_channels = len(channels)
+    active_channels = sum(1 for c in channels if c['enabled'])
+    total_valid_configs = sum(c['metrics']['valid_configs'] for c in channels)
+    total_unique_configs = sum(c['metrics']['unique_configs'] for c in channels)
+
+    avg_score = (sum(c['metrics']['overall_score'] for c in channels) / max(1, total_channels))
+    avg_success_rate = (sum((c['metrics']['success_count'] / max(1, c['metrics']['success_count'] + c['metrics']['fail_count'])) * 100 for c in channels) / max(1, total_channels))
+    avg_response_time = (sum(c['metrics']['avg_response_time'] for c in channels) / max(1, total_channels))
+
+    protocol_totals = {}
+    for c in channels:
+        for proto, count in (c['metrics'].get('protocol_counts') or {}).items():
+            if count > 0:
+                protocol_totals[proto] = protocol_totals.get(proto, 0) + count
+
+    score_buckets = {'90-100': 0, '70-89': 0, '50-69': 0, '30-49': 0, '0-29': 0}
+    for c in channels:
+        s = c['metrics']['overall_score']
+        if s >= 90:
+            score_buckets['90-100'] += 1
+        elif s >= 70:
+            score_buckets['70-89'] += 1
+        elif s >= 50:
+            score_buckets['50-69'] += 1
+        elif s >= 30:
+            score_buckets['30-49'] += 1
+        else:
+            score_buckets['0-29'] += 1
+
+    responsive_channels = [c for c in channels if c['metrics']['avg_response_time'] > 0]
+    fastest = sorted(responsive_channels, key=lambda x: x['metrics']['avg_response_time'])[:8]
+
+    top_performers = sorted_channels[:5]
+    bottom_performers = sorted_channels[-5:][::-1] if len(sorted_channels) > 5 else []
+
+    table_rows = []
+    for c in sorted_channels:
+        success_rate = (c['metrics']['success_count'] / max(1, c['metrics']['success_count'] + c['metrics']['fail_count'])) * 100
+        status_class, status_label = _status_meta(c['metrics']['overall_score'])
+        table_rows.append({
+            'name': c['url'].split('/')[-1] or c['url'],
+            'url': c['url'],
+            'enabled': c['enabled'],
+            'status_class': status_class,
+            'status_label': status_label,
+            'score': round(c['metrics']['overall_score'], 1),
+            'success_rate': round(success_rate, 1),
+            'response_time': round(c['metrics']['avg_response_time'], 2),
+            'valid_configs': c['metrics']['valid_configs'],
+            'total_configs': c['metrics']['total_configs'],
+            'unique_configs': c['metrics']['unique_configs'],
+            'last_success': c['metrics']['last_success'] or 'Never'
+        })
+
+    trend = [{
+        'timestamp': h.get('timestamp'),
+        'avg_score': h.get('avg_score', 0),
+        'total_valid_configs': h.get('total_valid_configs', 0),
+        'active_channels': h.get('active_channels', 0)
+    } for h in history]
+
+    return {
+        'generated_at': stats_data.get('timestamp', 'N/A'),
+        'summary': {
+            'total_channels': total_channels,
+            'active_channels': active_channels,
+            'total_valid_configs': total_valid_configs,
+            'total_unique_configs': total_unique_configs,
+            'avg_score': round(avg_score, 1),
+            'avg_success_rate': round(avg_success_rate, 1),
+            'avg_response_time': round(avg_response_time, 2)
+        },
+        'protocol_totals': protocol_totals,
+        'score_buckets': score_buckets,
+        'fastest': [{'name': c['url'].split('/')[-1] or c['url'], 'response_time': c['metrics']['avg_response_time']} for c in fastest],
+        'top_performers': [{'name': c['url'].split('/')[-1] or c['url'], 'score': round(c['metrics']['overall_score'], 1)} for c in top_performers],
+        'bottom_performers': [{'name': c['url'].split('/')[-1] or c['url'], 'score': round(c['metrics']['overall_score'], 1)} for c in bottom_performers],
+        'table_rows': table_rows,
+        'trend': trend
+    }
+
+_PALETTE = ['#e60023', '#ffffff', '#999999', '#777777', '#b3001b']
+
+def _esc(text):
+    return str(text).replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+
+def _render_donut(protocol_totals):
+    entries = sorted(protocol_totals.items(), key=lambda x: x[1], reverse=True)
+    if not entries:
+        return '<div class="empty">No protocol data yet</div>'
+    total = sum(v for _, v in entries) or 1
+    size = 160
+    cx = cy = size / 2
+    r = size / 2 - 16
+    circumference = 2 * 3.14159265 * r
+    offset = 0.0
+    segments = ''
+    legend = ''
+    for i, (label, val) in enumerate(entries):
+        frac = val / total
+        length = frac * circumference
+        color = _PALETTE[i % len(_PALETTE)]
+        segments += f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="{color}" stroke-width="20" stroke-dasharray="{length:.2f} {circumference:.2f}" stroke-dashoffset="{-offset:.2f}" transform="rotate(-90 {cx} {cy})"/>'
+        offset += length
+        pct = round(frac * 100, 1)
+        clean_label = label.replace('://', '')
+        legend += f'<div class="legend-item"><span class="legend-dot" style="background:{color}"></span><span class="legend-label">{_esc(clean_label)}</span><span class="legend-val mono">{val} ({pct}%)</span></div>'
+    svg = f'<svg viewBox="0 0 {size} {size}" width="150" height="150">{segments}</svg>'
+    return f'<div class="donut-wrap"><div>{svg}</div><div class="legend-list">{legend}</div></div>'
+
+def _render_score_bars(score_buckets):
+    colors = {'90-100': '#ffffff', '70-89': '#e60023', '50-69': '#b3001b', '30-49': '#888888', '0-29': '#555555'}
+    max_val = max(score_buckets.values()) if score_buckets.values() and max(score_buckets.values()) > 0 else 1
+    bars = ''
+    for label, val in score_buckets.items():
+        pct = (val / max_val) * 100 if max_val else 0
+        bars += f'''<div class="vbar-col">
+            <div class="vbar-track"><div class="vbar-fill" style="height:{pct:.1f}%;background:{colors[label]}"><span class="vbar-val mono">{val}</span></div></div>
+            <div class="vbar-label mono">{label}</div>
+        </div>'''
+    return f'<div class="vbar-chart">{bars}</div>'
+
+def _render_speed_bars(fastest):
+    if not fastest:
+        return '<div class="empty">No response time data yet</div>'
+    max_val = max(f['response_time'] for f in fastest) or 1
+    rows = ''
+    for f in fastest:
+        pct = (f['response_time'] / max_val) * 100 if max_val else 0
+        pct = max(pct, 4)
+        name = f['name'] if len(f['name']) <= 18 else f['name'][:17] + '…'
+        rows += f'''<div class="hbar-row">
+            <div class="hbar-label" title="{_esc(f['name'])}">{_esc(name)}</div>
+            <div class="hbar-track"><div class="hbar-fill" style="width:{pct:.1f}%"></div></div>
+            <div class="hbar-val mono">{f['response_time']}s</div>
+        </div>'''
+    return f'<div class="hbar-chart">{rows}</div>'
+
+def _render_trend(trend):
+    if len(trend) < 2:
+        return '<div class="empty">Trend needs at least 2 runs of history. Check back after the next scheduled run.</div>'
+    width, height = 600, 180
+    n = len(trend)
+    step = width / (n - 1)
+    values = [t['avg_score'] for t in trend]
+    min_v, max_v = 0, 100
+    span = max_v - min_v or 1
+
+    def y_for(v):
+        return height - ((v - min_v) / span) * height
+
+    coords = ' '.join(f'{i*step:.1f},{y_for(v):.1f}' for i, v in enumerate(values))
+    area = f'0,{height} ' + coords + f' {width},{height}'
+    dots = ''.join(f'<circle cx="{i*step:.1f}" cy="{y_for(v):.1f}" r="3.5" fill="#e60023"/>' for i, v in enumerate(values))
+
+    label_count = min(n, 6)
+    label_indices = sorted(set(round(i * (n - 1) / max(1, label_count - 1)) for i in range(label_count)))
+    labels_html = ''
+    for i in label_indices:
+        try:
+            dt = datetime.fromisoformat(trend[i]['timestamp'].replace('Z', '+00:00'))
+            label = dt.strftime('%m/%d %H:%M')
+        except Exception:
+            label = ''
+        left_pct = (i * step / width) * 100
+        labels_html += f'<span class="trend-tick mono" style="left:{left_pct:.1f}%">{label}</span>'
+
+    svg = f'''<svg viewBox="0 0 {width} {height}" width="100%" height="180" preserveAspectRatio="none">
+        <polygon points="{area}" fill="rgba(230,0,35,0.12)"/>
+        <polyline points="{coords}" fill="none" stroke="#e60023" stroke-width="2.5"/>
+        {dots}
+    </svg>'''
+    return f'<div class="trend-chart">{svg}<div class="trend-labels">{labels_html}</div></div>'
+
+def generate_html_report(stats_data):
+    data = _build_report_dataset(stats_data)
+    summary = data['summary']
+
+    table_rows_html = ''
+    for row in data['table_rows']:
+        table_rows_html += f'''
+                        <tr class="t-row" data-name="{_esc(row['name'].lower())}" data-score="{row['score']}" data-success="{row['success_rate']}" data-response="{row['response_time']}" data-valid="{row['valid_configs']}">
+                            <td class="c-name">
+                                <span class="dot dot-{row['status_class']}"></span>
+                                <span>{_esc(row['name'])}</span>
+                            </td>
+                            <td><span class="pill pill-{row['status_class']}">{row['status_label']}</span></td>
+                            <td class="mono">{row['score']}%</td>
+                            <td class="mono">{row['success_rate']}%</td>
+                            <td class="mono">{row['response_time']}s</td>
+                            <td class="mono">{row['valid_configs']}/{row['total_configs']}</td>
+                            <td class="mono muted">{_esc(row['last_success'])}</td>
+                        </tr>'''
+
+    top_html = ''.join(f'<div class="perf-row"><span class="perf-name">{_esc(p["name"])}</span><span class="perf-score good-text">{p["score"]}%</span></div>' for p in data['top_performers'])
+    bottom_html = ''.join(f'<div class="perf-row"><span class="perf-name">{_esc(p["name"])}</span><span class="perf-score bad-text">{p["score"]}%</span></div>' for p in data['bottom_performers'])
+
+    gauge_score = summary['avg_score']
+    gauge_circumference = 2 * 3.14159265 * 80
+    gauge_offset = gauge_circumference * (1 - min(100, max(0, gauge_score)) / 100)
+
+    donut_html = _render_donut(data['protocol_totals'])
+    score_bars_html = _render_score_bars(data['score_buckets'])
+    speed_bars_html = _render_speed_bars(data['fastest'])
+    trend_html = _render_trend(data['trend'])
+
+    html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FineVPN Source Intelligence Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {{
+    --bg: #000000;
+    --surface: #090909;
+    --surface-2: #151515;
+    --border: #303030;
+    --text: #ffffff;
+    --muted: #999999;
+    --accent: #e60023;
+    --good: #ffffff;
+    --warn: #aaaaaa;
+    --risk: #888888;
+    --bad: #e60023;
+    --radius: 14px;
+}}
+* {{ box-sizing: border-box; min-width: 0; }}
+html, body {{ overflow-x: hidden; width: 100%; }}
+body {{
+    margin: 0;
+    background: #000000;
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}}
+.wrap {{ max-width: 1280px; width: 100%; margin: 0 auto; padding: 28px 20px 60px; overflow-x: hidden; }}
+h1, h2, h3 {{ font-family: 'Space Grotesk', 'Inter', sans-serif; margin: 0; }}
+.mono {{ font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }}
+.muted {{ color: var(--muted); }}
+header.top {{
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    padding-bottom: 22px; border-bottom: 1px solid var(--border); margin-bottom: 28px;
+}}
+.brand {{ display: flex; align-items: center; gap: 12px; }}
+.pulse {{
+    width: 10px; height: 10px; border-radius: 50%; background: var(--good); flex-shrink: 0;
+    box-shadow: none; animation: none;
+}}
+@keyframes pulse {{
+    0% {{ box-shadow: none; }}
+    70% {{ box-shadow: none; }}
+    100% {{ box-shadow: none; }}
+}}
+@media (prefers-reduced-motion: reduce) {{
+    .pulse {{ animation: none; }}
+}}
+.brand-title {{ font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }}
+.brand-sub {{ font-size: 12px; color: var(--muted); margin-top: 2px; word-break: break-all; }}
+.links {{ display: flex; gap: 10px; flex-shrink: 0; }}
+.links a {{
+    display: flex; align-items: center; justify-content: center; width: 36px; height: 36px;
+    border-radius: 10px; background: var(--surface); border: 1px solid var(--border);
+    color: var(--muted); transition: 0.15s ease;
+}}
+.links a:hover {{ color: var(--accent); border-color: var(--accent); }}
+.links svg {{ width: 17px; height: 17px; }}
+
+.hero {{
+    display: grid; grid-template-columns: minmax(160px, 220px) minmax(0, 1fr); gap: 24px; align-items: center;
+    background: linear-gradient(150deg, var(--surface) 0%, var(--surface-2) 100%);
+    border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 24px;
+}}
+.gauge-wrap {{ display: flex; align-items: center; justify-content: center; position: relative; }}
+.gauge-num {{ position: absolute; text-align: center; }}
+.gauge-num .val {{ font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; }}
+.gauge-num .lbl {{ font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }}
+.stat-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; }}
+.stat-card {{ background: #090909; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; min-width: 0; }}
+.stat-card .n {{ font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; overflow-wrap: break-word; }}
+.stat-card .l {{ font-size: 11.5px; color: var(--muted); margin-top: 4px; }}
+
+.grid-2 {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 20px; }}
+.grid-3 {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 20px; }}
+
+.card {{
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; min-width: 0;
+}}
+.card h3 {{ font-size: 15px; font-weight: 600; margin-bottom: 14px; }}
+
+.donut-wrap {{ display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }}
+.legend-list {{ flex: 1; min-width: 140px; }}
+.legend-item {{ display: flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 4px 0; }}
+.legend-dot {{ width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }}
+.legend-label {{ flex: 1; color: var(--text); }}
+.legend-val {{ color: var(--muted); font-size: 11.5px; }}
+
+.vbar-chart {{ display: flex; align-items: flex-end; gap: 10px; height: 180px; }}
+.vbar-col {{ flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; }}
+.vbar-track {{ flex: 1; width: 100%; display: flex; align-items: flex-end; }}
+.vbar-fill {{ width: 100%; border-radius: 5px 5px 0 0; min-height: 3px; position: relative; display: flex; justify-content: center; }}
+.vbar-val {{ position: absolute; top: -18px; font-size: 11px; color: var(--text); }}
+.vbar-label {{ font-size: 10px; color: var(--muted); margin-top: 8px; text-align: center; }}
+
+.hbar-chart {{ display: flex; flex-direction: column; gap: 10px; }}
+.hbar-row {{ display: grid; grid-template-columns: 90px 1fr 48px; align-items: center; gap: 8px; }}
+.hbar-label {{ font-size: 11.5px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
+.hbar-track {{ background: var(--surface-2); border-radius: 5px; height: 10px; overflow: hidden; }}
+.hbar-fill {{ background: var(--accent); height: 100%; border-radius: 5px; }}
+.hbar-val {{ font-size: 11px; text-align: right; color: var(--text); }}
+
+.trend-chart {{ width: 100%; }}
+.trend-labels {{ position: relative; height: 16px; margin-top: 4px; }}
+.trend-tick {{ position: absolute; font-size: 9.5px; color: var(--muted); transform: translateX(-50%); white-space: nowrap; }}
+
+.perf-row {{ display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; gap: 10px; }}
+.perf-row:last-child {{ border-bottom: none; }}
+.perf-name {{ color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }}
+.good-text {{ color: var(--good); font-family: 'JetBrains Mono', monospace; flex-shrink: 0; }}
+.bad-text {{ color: var(--bad); font-family: 'JetBrains Mono', monospace; flex-shrink: 0; }}
+
+.table-card {{ background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; max-width: 100%; }}
+.table-top {{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }}
+#search {{
+    background: var(--surface-2); border: 1px solid var(--border); color: var(--text);
+    padding: 9px 14px; border-radius: 8px; font-size: 13.5px; width: 100%; max-width: 260px; outline: none;
+}}
+#search:focus {{ border-color: var(--accent); }}
+.table-scroll {{ overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }}
+table {{ width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13.5px; }}
+th {{
+    text-align: left; padding: 10px 12px; color: var(--muted); font-weight: 600; font-size: 11.5px;
+    text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none;
+    white-space: nowrap;
+}}
+th:hover {{ color: var(--accent); }}
+th.sorted::after {{ content: ' ↓'; }}
+th.sorted.asc::after {{ content: ' ↑'; }}
+td {{ padding: 10px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }}
+.c-name {{ display: flex; align-items: center; gap: 9px; }}
+.dot {{ width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }}
+.dot-good {{ background: var(--good); }}
+.dot-warn {{ background: var(--warn); }}
+.dot-risk {{ background: var(--risk); }}
+.dot-bad {{ background: var(--bad); }}
+.pill {{ font-size: 11px; padding: 3px 9px; border-radius: 20px; font-weight: 600; }}
+.pill-good {{ background: #151515; color: var(--good); }}
+.pill-warn {{ background: #151515; color: var(--warn); }}
+.pill-risk {{ background: #151515; color: var(--risk); }}
+.pill-bad {{ background: #1b0005; color: var(--bad); }}
+.legend-note {{ font-size: 11.5px; color: var(--muted); margin-top: 14px; }}
+
+footer {{ margin-top: 32px; text-align: center; color: var(--muted); font-size: 12.5px; }}
+footer a {{ color: var(--accent); text-decoration: none; }}
+.empty {{ text-align: center; padding: 40px 20px; color: var(--muted); font-size: 12.5px; }}
+
+@media (max-width: 640px) {{
+    .hero {{ grid-template-columns: 1fr; }}
+    .gauge-wrap svg {{ width: 150px; height: 150px; }}
+}}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <header class="top">
+        <div class="brand">
+            <span class="pulse"></span>
+            <div>
+                <div class="brand-title">FineVPN Source Intelligence Report</div>
+                <div class="brand-sub mono">Last run: {data['generated_at']}</div>
+            </div>
+        </div>
+        <div class="links">
+            <a href="https://finevpn.example" target="_blank" title="Repository"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4a2 2 0 012-2h10.5A1.5 1.5 0 0118 3.5V21l-6-3-6 3V6a2 2 0 00-2-2z"/></svg></a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="gauge-wrap">
+            <svg width="180" height="180" viewBox="0 0 180 180">
+                <circle cx="90" cy="90" r="80" fill="none" stroke="var(--surface-2)" stroke-width="14"/>
+                <circle id="gauge-ring" cx="90" cy="90" r="80" fill="none" stroke="var(--accent)" stroke-width="14"
+                    stroke-linecap="round" transform="rotate(-90 90 90)"
+                    stroke-dasharray="{gauge_circumference:.2f}" stroke-dashoffset="{gauge_circumference:.2f}"
+                    data-target-offset="{gauge_offset:.2f}"/>
+            </svg>
+            <div class="gauge-num">
+                <div class="val mono" id="gauge-value">0%</div>
+                <div class="lbl">Avg Health</div>
+            </div>
+        </div>
+        <div class="stat-grid">
+            <div class="stat-card"><div class="n">{summary['active_channels']}<span class="muted" style="font-size:14px"> / {summary['total_channels']}</span></div><div class="l">Active Sources</div></div>
+            <div class="stat-card"><div class="n mono">{summary['total_valid_configs']}</div><div class="l">Valid Configs Fetched</div></div>
+            <div class="stat-card"><div class="n mono">{summary['total_unique_configs']}</div><div class="l">Unique Configs</div></div>
+            <div class="stat-card"><div class="n mono">{summary['avg_response_time']}s</div><div class="l">Avg Response Time</div></div>
+        </div>
+    </div>
+
+    <div class="grid-3">
+        <div class="card">
+            <h3>Protocol Distribution</h3>
+            {donut_html}
+        </div>
+        <div class="card">
+            <h3>Source Health Distribution</h3>
+            {score_bars_html}
+            <div class="legend-note">Sources scoring under 30% are auto-disabled by the pipeline.</div>
+        </div>
+        <div class="card">
+            <h3>Fastest Sources (avg response)</h3>
+            {speed_bars_html}
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <h3>Health Score Trend</h3>
+            {trend_html}
+        </div>
+        <div class="card">
+            <h3>Top &amp; Bottom Performers</h3>
+            <div style="margin-bottom:14px">{top_html or '<div class="perf-row muted">No data yet</div>'}</div>
+            <div style="border-top:1px dashed var(--border);padding-top:10px">{bottom_html or ''}</div>
+        </div>
+    </div>
+
+    <div class="table-card">
+        <div class="table-top">
+            <h3>All Sources</h3>
+            <input id="search" type="text" placeholder="Search sources...">
+        </div>
+        <div class="table-scroll">
+            <table id="main-table">
+                <thead>
+                    <tr>
+                        <th data-key="name">Source</th>
+                        <th data-key="status_class">Status</th>
+                        <th data-key="score" class="sorted">Score</th>
+                        <th data-key="success">Success Rate</th>
+                        <th data-key="response">Response</th>
+                        <th data-key="valid">Valid/Total</th>
+                        <th>Last Success</th>
+                    </tr>
+                </thead>
+                <tbody>{table_rows_html}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        Generated automatically by <a href="https://finevpn.example" target="_blank">FineVPN 2.0</a> · FineVPN Engine
+    </footer>
+</div>
+<script>
+(function() {{
+    const ring = document.getElementById('gauge-ring');
+    const valueEl = document.getElementById('gauge-value');
+    const target = parseFloat(ring.dataset.targetOffset);
+    const total = parseFloat(ring.getAttribute('stroke-dasharray'));
+    const finalScore = {gauge_score};
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const duration = reduced ? 0 : 900;
+    const start = performance.now();
+    function frame(now) {{
+        const p = duration === 0 ? 1 : Math.min(1, (now - start) / duration);
+        ring.setAttribute('stroke-dashoffset', total - (total - target) * p);
+        valueEl.textContent = (finalScore * p).toFixed(1) + '%';
+        if (p < 1) requestAnimationFrame(frame);
+    }}
+    requestAnimationFrame(frame);
+}})();
+
+(function() {{
+    const table = document.getElementById('main-table');
+    if (!table) return;
+    const tbody = table.querySelector('tbody');
+    const searchInput = document.getElementById('search');
+    if (searchInput) {{
+        searchInput.addEventListener('input', () => {{
+            const q = searchInput.value.toLowerCase();
+            tbody.querySelectorAll('.t-row').forEach(row => {{
+                row.style.display = row.dataset.name.includes(q) ? '' : 'none';
+            }});
+        }});
+    }}
+    let currentSort = {{ key: 'score', asc: false }};
+    table.querySelectorAll('th[data-key]').forEach(th => {{
+        th.addEventListener('click', () => {{
+            const key = th.dataset.key;
+            const asc = currentSort.key === key ? !currentSort.asc : false;
+            currentSort = {{ key, asc }};
+            table.querySelectorAll('th[data-key]').forEach(h => h.classList.remove('sorted','asc'));
+            th.classList.add('sorted');
+            if (asc) th.classList.add('asc');
+            const rows = Array.from(tbody.querySelectorAll('.t-row'));
+            const attrMap = {{ name: 'name', status_class: 'name', score: 'score', success: 'success', response: 'response', valid: 'valid' }};
+            rows.sort((a, b) => {{
+                const attr = attrMap[key] || key;
+                let av = a.dataset[attr], bv = b.dataset[attr];
+                if (!isNaN(parseFloat(av)) && key !== 'name') {{ av = parseFloat(av); bv = parseFloat(bv); }}
+                if (av < bv) return asc ? -1 : 1;
+                if (av > bv) return asc ? 1 : -1;
+                return 0;
+            }});
+            rows.forEach(r => tbody.appendChild(r));
+        }});
+    }});
+}})();
+</script>
+</body>
+</html>'''
+    
+    return html
+
+def main():
+    try:
+        with open('configs/channel_stats.json', 'r') as f:
+            stats_data = json.load(f)
+        
+        if not stats_data:
+            stats_data = {"channels": [], "timestamp": datetime.now().isoformat()}
+
+        os.makedirs('assets', exist_ok=True)
+        
+        svg_content = generate_basic_svg(stats_data)
+        with open('assets/channel_stats_chart.svg', 'w', encoding='utf-8') as f:
+            f.write(svg_content)
+        
+        html_content = generate_html_report(stats_data)
+        with open('assets/performance_report.html', 'w', encoding='utf-8') as f:
+            f.write(html_content)
+        
+        print("Successfully generated chart and report!")
+        
+    except FileNotFoundError:
+        print("Error: configs/channel_stats.json not found. Skipping chart generation.")
+    except Exception as e:
+        print(f"Error generating outputs: {str(e)}")
+
+if __name__ == '__main__':
+    main()
