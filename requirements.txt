@@ -1,0 +1,12 @@
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+httpx[http2]>=0.27,<1.0
+websockets>=12,<16
+aiofiles>=23,<26
+psutil>=5.9,<8
+qrcode[pil]>=7.4,<9
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+python-dateutil>=2.8,<3
+urllib3>=2.0,<3
+PyYAML>=6.0,<7
