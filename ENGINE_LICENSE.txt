@@ -1,21 +1,38 @@
-MIT License
+<div dir="rtl">
 
-Copyright (c) 2025 Anonymous
+# اعلان حق نشر و مالکیت برند 𝑭𝒊𝒏𝒆𝑽𝑷𝑵
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+**نام پروژه:** 𝑭𝒊𝒏𝒆𝑽𝑷𝑵  
+**صاحب اثر/برند اعلام‌شده:** محمدصادق افغان  
+**پشتیبانی:** [پشتیبانی تلگرام](https://t.me/sadiq_AFG1)  
+**سال اعلان:** ۲۰۲۶
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+© 2026 Muhammad Sadiq Afghan. حقوق مربوط به آثار اصیل و مواردی که مالکیت آن‌ها متعلق به صاحب اثر است، محفوظ است؛ تا حدی که قوانین قابل اجرا اجازه می‌دهند.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+این اعلان دربارهٔ نام و هویت بصری FineVPN، لوگوی اصلی ارائه‌شده توسط صاحب اثر، مستندات اصیل و بخش‌های اصیل این مخزن اعمال می‌شود، مشروط بر اینکه آن موارد واقعاً متعلق به صاحب اثر باشند.
+
+## استفاده و بازتوزیع
+
+- نباید اعلان‌های حق نشر یا اطلاعات مالکیت را به‌صورت گمراه‌کننده حذف یا جعل کرد.
+- تغییر سورس‌کد به‌خودی‌خود به معنای انتقال مالکیت نام تجاری، لوگو یا آثار اصیل نیست.
+- نسخه‌های تغییریافته باید تغییرات خود را مشخص کنند و نباید بدون اجازه به‌عنوان نسخهٔ رسمی یا مورد تأیید سازنده معرفی شوند.
+- استفاده از نام، لوگو یا هویت بصری محافظت‌شده تابع قوانین قابل اجرا و مجوز لازم است.
+- گزارش‌های مربوط به حق نشر باید از مسیر رسمی و با اطلاعات دقیق مطرح شوند؛ ادعاهای مالکیت فقط برای حقوقی قابل پیگیری‌اند که واقعاً در اختیار گزارش‌دهنده باشند.
+
+## اجزای شخص ثالث
+
+این پروژه از کتابخانه‌ها و اجزای شخص ثالث استفاده می‌کند. آن اجزا همچنان تابع مجوزها، حق نشر و شرایط صاحبان اصلی خود هستند. این اعلان جایگزین مجوزهای آن‌ها نیست.
+
+## وضعیت مجوز نرم‌افزار
+
+در این نسخه، مجوز عمومی نرم‌افزار (مانند MIT/Apache/GPL) عمداً اضافه نشده است؛ نباید نبودن فایل مجوز را به معنی اعطای مجوز آزاد بازتوزیع فرض کرد. پیش از بازتوزیع، استفادهٔ تجاری یا ایجاد مشتق، حقوق و مجوزهای قابل اجرا را بررسی کنید و در صورت نیاز مشاورهٔ حقوقی بگیرید.
+
+## محدودیت فنی
+
+این متن، امضای دیجیتال یا هر حفاظت نرم‌افزاری دیگری به‌تنهایی نمی‌تواند کپی فنی یا تغییر سورس‌کدی را که شخص کنترل کامل آن را دارد، غیرممکن کند. هدف، مشخص‌کردن هویت رسمی، حفظ اعلان‌های مالکیت و جلوگیری از معرفی گمراه‌کنندهٔ نسخه‌های مشتق است.
+
+## تماس
+
+برای پرسش یا هماهنگی مربوط به برند و حق نشر، با [پشتیبانی تلگرام](https://t.me/sadiq_AFG1) تماس بگیرید.
+
+</div>
