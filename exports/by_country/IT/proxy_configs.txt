@@ -4,21 +4,21 @@
 //support-url: https://t.me/FineVPNSupport
 //profile-web-page-url: https://finevpn.example
 
-vless://29f178f7-f96f-46ba-8fc0-bbcd690ba788@82.118.16.189:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&security=reality&pbk=zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4&sid=1e9a49dd374c1191#🇮🇹 96 - IT - VLESS/REALITY/PBK/SID/VISION - 443
+vless://29f178f7-f96f-46ba-8fc0-bbcd690ba788@82.118.16.189:443?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.cloudflare.com&security=reality&pbk=zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4&sid=1e9a49dd374c1191#🇮🇹 100 - IT - VLESS/REALITY/PBK/SID/VISION - 443
 
-vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?encryption=none&security=none&type=tcp#🇮🇹 437 - IT - VLESS - 10086
+vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?encryption=none&security=none&type=tcp#🇮🇹 452 - IT - VLESS - 10086
 
-vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?encryption=none&flow=xtls-rprx-vision&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU&security=reality&sid=cd6065902eea7a02&sni=www.cloudflare.com&type=raw#🇮🇹 562 - IT - VLESS/RAW/REALITY/PBK/SID/VISION - 443
+vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?encryption=none&flow=xtls-rprx-vision&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU&security=reality&sid=cd6065902eea7a02&sni=www.cloudflare.com&type=raw#🇮🇹 584 - IT - VLESS/RAW/REALITY/PBK/SID/VISION - 443
 
-vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=cd6065902eea7a02&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU#🇮🇹 563 - IT - VLESS/REALITY/PBK/SID/VISION/UTLS - 443
+ss://YWVzLTI1Ni1nY206ZDFmYTJmNGI5OGEzOGJjOA@194.87.47.204:10901#🇮🇹 275 - IT - SS/AEAD - 10901
 
-ss://YWVzLTI1Ni1nY206ZDFmYTJmNGI5OGEzOGJjOA@194.87.47.204:10901#🇮🇹 267 - IT - SS/AEAD - 10901
+ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ@leviko-it8672.shopingggg.ir:8388#🇮🇹 284 - IT - SS/AEAD - 8388
 
-ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ@57.131.27.21:8388#🇮🇹 278 - IT - SS/AEAD - 8388
+ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ@57.131.27.21:8388#🇮🇹 288 - IT - SS/AEAD - 8388
 
-ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ@57.131.48.45:8388#🇮🇹 279 - IT - SS/AEAD - 8388
+ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ@57.131.48.45:8388#🇮🇹 289 - IT - SS/AEAD - 8388
 
-hysteria2://Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s@205.237.109.162:8443?insecure=1&sni=hopp-netherland-new.dynuddns.net#🇮🇹 32 - IT - Hysteria2/QUIC - 8443
+hysteria2://Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s@205.237.109.162:8443?insecure=1&sni=hopp-netherland-new.dynuddns.net#🇮🇹 30 - IT - Hysteria2/QUIC - 8443
 
-hysteria2://Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s@205.237.109.163:8443?insecure=1&sni=hopp-netherland-new.dynuddns.net#🇮🇹 33 - IT - Hysteria2/QUIC - 8443
+hysteria2://Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s@205.237.109.163:8443?insecure=1&sni=hopp-netherland-new.dynuddns.net#🇮🇹 31 - IT - Hysteria2/QUIC - 8443
 

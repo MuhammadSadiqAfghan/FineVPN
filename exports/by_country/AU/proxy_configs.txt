@@ -4,11 +4,11 @@
 //support-url: https://t.me/FineVPNSupport
 //profile-web-page-url: https://finevpn.example
 
-vless://ba8eb673-b4a2-41b8-a813-0e535e2cf374@mrvpn1403.rightel001.chaghooosazi.shop:443?hiddify=1&sni=rightel1.chaghooosazi.shop&type=ws&alpn=http/1.1&path=/9AYvqFVnWz0w4dr32c8Sz5kJF4Ehx3&host=rightel1.chaghooosazi.shop&encryption=none&fp=chrome&headerType=None&security=tls#🇦🇺 509 - AU - VLESS/WS/TLS/UTLS - 443
+vless://ba8eb673-b4a2-41b8-a813-0e535e2cf374@mrvpn1403.rightel001.chaghooosazi.shop:443?hiddify=1&sni=rightel1.chaghooosazi.shop&type=ws&alpn=http/1.1&path=/9AYvqFVnWz0w4dr32c8Sz5kJF4Ehx3&host=rightel1.chaghooosazi.shop&encryption=none&fp=chrome&headerType=None&security=tls#🇦🇺 524 - AU - VLESS/WS/TLS/UTLS - 443
 
-vless://bb2af53a-8a2a-4466-bcf4-7e7de11b8381@mtn001.chaghooosazi.shop:443?path=/xMKyVeMwq7FLS5oNsuc&security=tls&encryption=none&alpn=http/1.1&host=mtnasl001.chaghooosazi.shop&type=ws&sni=mtnasl001.chaghooosazi.shop#🇦🇺 510 - AU - VLESS/WS/TLS - 443
+vless://bb2af53a-8a2a-4466-bcf4-7e7de11b8381@mtn001.chaghooosazi.shop:443?path=/xMKyVeMwq7FLS5oNsuc&security=tls&encryption=none&alpn=http/1.1&host=mtnasl001.chaghooosazi.shop&type=ws&sni=mtnasl001.chaghooosazi.shop#🇦🇺 525 - AU - VLESS/WS/TLS - 443
 
-vless://c16cfefa-3ca3-4853-a582-02cd7205ae65@mrvpn1403.rightel001.chaghooosazi.shop:443?path=/9AYvqFVnWz0w4dr32c8Sz5kJF4Ehx3&security=tls&encryption=none&alpn=http/1.1&host=rightel1.chaghooosazi.shop&fp=chrome&type=ws&sni=rightel1.chaghooosazi.shop#🇦🇺 522 - AU - VLESS/WS/TLS/UTLS - 443
+vless://c16cfefa-3ca3-4853-a582-02cd7205ae65@mrvpn1403.rightel001.chaghooosazi.shop:443?path=/9AYvqFVnWz0w4dr32c8Sz5kJF4Ehx3&security=tls&encryption=none&alpn=http/1.1&host=rightel1.chaghooosazi.shop&fp=chrome&type=ws&sni=rightel1.chaghooosazi.shop#🇦🇺 538 - AU - VLESS/WS/TLS/UTLS - 443
 
-vless://ef4cad50-4f83-4c66-85ae-ce8e9692d8cb@mtn006.chaghooosazi.shop:443?path=/xMKyVeMwq7FLS5oNsuc&security=tls&encryption=none&alpn=http/1.1&host=mtnasl006.chaghooosazi.shop&type=ws&sni=mtnasl006.chaghooosazi.shop#🇦🇺 607 - AU - VLESS/WS/TLS - 443
+vless://ef4cad50-4f83-4c66-85ae-ce8e9692d8cb@mtn006.chaghooosazi.shop:443?path=/xMKyVeMwq7FLS5oNsuc&security=tls&encryption=none&alpn=http/1.1&host=mtnasl006.chaghooosazi.shop&type=ws&sni=mtnasl006.chaghooosazi.shop#🇦🇺 630 - AU - VLESS/WS/TLS - 443
 
