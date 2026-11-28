@@ -1,0 +1,12 @@
+//profile-title: base64:8J+RvUZpbmVWUE4tTFQ=
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/FineVPNSupport
+//profile-web-page-url: https://finevpn.example
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpKMUludVU2UVJUNUpPaDFtUWZralUy@144.31.243.2:16015#🇱🇹 50 - LT - SS/AEAD - 16015
+
+ss://YWVzLTI1Ni1jZmI6VWtYUnNYdlI2YnVETUcyWQ@195.238.126.20:9001#🇱🇹 171 - LT - SS/STREAM - 9001
+
+ss://YWVzLTI1Ni1jZmI6bXdnUmc5aFJxM2I0UW53Yg@195.238.126.20:9068#🇱🇹 172 - LT - SS/STREAM - 9068
+

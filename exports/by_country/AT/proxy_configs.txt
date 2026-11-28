@@ -1,0 +1,8 @@
+//profile-title: base64:8J+RvUZpbmVWUE4tQVQ=
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/FineVPNSupport
+//profile-web-page-url: https://finevpn.example
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBZGF3ZmZGTUh5bWxhc1JiMFZPUDNIRmY3c1RHNXNKeA@152.53.1.57:8388#🇦🇹 42 - AT - SS/AEAD - 8388
+

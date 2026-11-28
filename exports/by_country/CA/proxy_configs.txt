@@ -1,0 +1,52 @@
+//profile-title: base64:8J+RvUZpbmVWUE4tQ0E=
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/FineVPNSupport
+//profile-web-page-url: https://finevpn.example
+
+vless://160ca353-676d-4b7f-a041-0289e388b865@172.66.140.62:8880?security=none&sni=skk.moe&type=ws&host=proud-cloud-7bdd.208-a52.workers.dev#🇨🇦 60 - CA - VLESS/WS - 8880
+
+vless://55ba7b31-b0eb-4362-9c9b-fc53b0a53fab@89.125.13.161:8443?mode=auto&path=/810011f9c542&security=reality&encryption=none&pbk=8kxKr4wsOvuLmNXQFdtPqKwtIA-zX2nvrZ2ro_nMTVA&fp=firefox&spx=/&type=xhttp&sni=ee1.setlocation.top&sid=14605d12bfd95119#🇨🇦 244 - CA - VLESS/XHTTP/REALITY/PBK/SID/UTLS - 8443
+
+vless://77777777-8a3e-6666-b6d1-a9c5f0e8b3a2@104.19.214.98:2087?path=/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512&security=tls&encryption=none&insecure=0&host=faxf32gkfzoxqv.fx6hsv0.ccwu.cc&fp=chrome&type=ws&allowInsecure=0&sni=faxf32gkfzoxqv.fx6hsv0.ccwu.cc#🇨🇦 322 - CA - VLESS/WS/TLS/UTLS - 2087
+
+vless://b9ea760d-3200-4d6d-8000-30514ebbce5a@104.26.13.40:8880?security=false&fp=chrome&type=ws&headerType=none&host=aged-pine-d8c4.379.workers.dev&path=/pyip=ProxyIP.JP.CMLiussss.net#🇨🇦 507 - CA - VLESS/WS/UTLS - 8880
+
+vless://ca52e2b6-fb9f-4dac-b6dc-49da9923f251@209.200.246.148:443?encryption=none&flow=xtls-rprx-vision&fp=firefox&pbk=uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk&security=reality&sid=f98843107912e782&sni=www.cloudflare.com&type=raw#🇨🇦 533 - CA - VLESS/RAW/REALITY/PBK/SID/VISION/UTLS - 443
+
+vless://d672ec4f-afba-4f61-af09-eec872f97e99@23.227.60.7:443?path=Path/Telegram@SINABIGO/?ed=2048&security=tls&encryption=none&host=test43.pages.dev&type=ws&sni=test43.pages.dev#🇨🇦 554 - CA - VLESS/WS/TLS - 443
+
+vless://dd777f39-2996-4269-b88f-0b64436d0274@23.227.60.12:2096?path=/&security=tls&encryption=none&alpn=h2,http/1.1&host=capitalnet.jokerv2ray.store&fp=firefox&type=ws&sni=joinchannel.jokerv2ray.store#🇨🇦 569 - CA - VLESS/WS/TLS/UTLS - 2096
+
+vless://dd777f39-2996-4269-b88f-0b64436d0274@23.227.60.12:2096?type=ws&path=/&host=capitalnet.sameasyou.sbs&security=tls&fp=firefox&alpn=h2,http/1.1&sni=joinchannel.sameasyou.sbs#🇨🇦 570 - CA - VLESS/WS/TLS/UTLS - 2096
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5dHcyYXdu@142.4.216.225:443#🇨🇦 34 - CA - SS/AEAD - 443
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp5dHcyYXdu@ca225.vpnbook.com:443#🇨🇦 37 - CA - SS/AEAD - 443
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpGRDNyQ3VPc3hPYXk@15.235.75.71:8388#🇨🇦 48 - CA - SS/AEAD - 8388
+
+ss://YWVzLTEyOC1nY206c2hhZG93c29ja3M@149.22.95.183:443#🇨🇦 152 - CA - SS/AEAD - 443
+
+ss://YWVzLTI1Ni1nY206Y2RCSURWNDJEQ3duZklO@51.79.85.185:8118#🇨🇦 265 - CA - SS/AEAD - 8118
+
+ss://YWVzLTI1Ni1nY206a0RXdlhZWm9UQmNHa0M0@51.222.136.236:8882#🇨🇦 270 - CA - SS/AEAD - 8882
+
+ss://YWVzLTI1Ni1nY206a0RXdlhZWm9UQmNHa0M0@51.79.49.116:8882#🇨🇦 271 - CA - SS/AEAD - 8882
+
+ss://YWVzLTI1Ni1nY206aXR6dnBuQDMyMQ@184.107.106.77:8388#🇨🇦 276 - CA - SS/AEAD - 8388
+
+ss://YWVzLTI1Ni1nY206ekROVmVkUkZQUWV4Rzl2@51.222.12.127:445#🇨🇦 285 - CA - SS/AEAD - 445
+
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@15.223.183.81:443?insecure=1&sni=t.me#🇨🇦 22 - CA - Hysteria2/QUIC - 443
+
+hysteria2://H7mP2xY9kJ4nQ8wR5tF6vB3z@vpn-ca-001.fastervpn.world:443?insecure=1&sni=t.me#🇨🇦 25 - CA - Hysteria2/QUIC - 443
+
+vmess://eyJ2IjogbnVsbCwgInBzIjogIvCfh6jwn4emIDE3IC0gQ0EgLSBWTWVzcyAtIDE4MDAwIiwgImFkZCI6ICIxMzQuMTk1LjE5Ni4yMTEiLCAicG9ydCI6IDE4MDAwLCAiaWQiOiAiZjhjOGRjM2QtMGQzNy00NmIwLThiMzQtYTcyMzI4ODJmY2ZlIiwgImFpZCI6ICIwIiwgInNjeSI6ICJhdXRvIiwgIm5ldCI6ICJ0Y3AiLCAidHlwZSI6IG51bGwsICJob3N0IjogbnVsbCwgImFscG4iOiBudWxsLCAicGF0aCI6ICIvQFByb3h5VlBOMTEiLCAidGxzIjogIm5vbmUiLCAic25pIjogbnVsbCwgImZwIjogbnVsbCwgIm5hbWUiOiAi8J+HqPCfh6YgQ0EgMSJ9
+
+vmess://eyJ2IjogbnVsbCwgInBzIjogIvCfh6jwn4emIDE4IC0gQ0EgLSBWTWVzcyAtIDE4MDAwIiwgImFkZCI6ICIyMy4xNjIuMjAwLjE5OCIsICJwb3J0IjogMTgwMDAsICJpZCI6ICJmOGM4ZGMzZC0wZDM3LTQ2YjAtOGIzNC1hNzIzMjg4MmZjZmUiLCAiYWlkIjogIjAiLCAic2N5IjogImF1dG8iLCAibmV0IjogInRjcCIsICJ0eXBlIjogbnVsbCwgImhvc3QiOiBudWxsLCAiYWxwbiI6IG51bGwsICJwYXRoIjogIi8iLCAidGxzIjogIm5vbmUiLCAic25pIjogbnVsbCwgImZwIjogbnVsbCwgIm5hbWUiOiAi8J+HqPCfh6YgQ0EgMiJ9
+
+vmess://eyJhZGQiOiAiMTM0LjE5NS4xOTYuMjExIiwgImFpZCI6ICIwIiwgImFscG4iOiAiIiwgImZwIjogIiIsICJpZCI6ICJmOGM4ZGMzZC0wZDM3LTQ2YjAtOGIzNC1hNzIzMjg4MmZjZmUiLCAiaW5zZWN1cmUiOiAiMCIsICJuZXQiOiAidGNwIiwgInBvcnQiOiAxODAwMCwgInBzIjogIvCfh6jwn4emIDkxIC0gQ0EgLSBWTWVzcyAtIDE4MDAwIiwgInNjeSI6ICJhdXRvIiwgInNuaSI6ICIiLCAidGxzIjogIm5vbmUiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiIsICJuYW1lIjogInYyZ28gfCDwn4eo8J+HpiBDQSB8IFZNRVNTIHwgMzQyIn0=
+
+vmess://eyJhZGQiOiAiMjMuMTYyLjIwMC4xOTgiLCAiYWlkIjogMCwgImlkIjogImY4YzhkYzNkLTBkMzctNDZiMC04YjM0LWE3MjMyODgyZmNmZSIsICJuZXQiOiAidGNwIiwgInBvcnQiOiAxODAwMCwgInBzIjogIvCfh6jwn4emIDE0NSAtIENBIC0gVk1lc3MgLSAxODAwMCIsICJzY3kiOiAiYXV0byIsICJza2lwLWNlcnQtdmVyaWZ5IjogdHJ1ZSwgInRscyI6ICJub25lIiwgInR5cGUiOiAiIiwgInYiOiAiMiIsICJuYW1lIjogInYyZ28gfCDwn4eo8J+HpiBDQSB8IFZNRVNTIHwgMzQ1In0=
+

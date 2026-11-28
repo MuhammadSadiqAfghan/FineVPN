@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-11-28T05:09:47.222661",
+  "raw_count": 1184,
+  "valid_count": 1184,
+  "tested_count": 382,
+  "verified_by": [
+    "xray",
+    "singbox"
+  ],
+  "test_status": {
+    "xray": "completed",
+    "singbox": "completed"
+  },
+  "protocol_counts": {
+    "VLESS": 641,
+    "SS": 287,
+    "HYSTERIA2": 75,
+    "TROJAN": 8,
+    "VMESS": 173
+  }
+}

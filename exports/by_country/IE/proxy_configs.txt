@@ -1,0 +1,16 @@
+//profile-title: base64:8J+RvUZpbmVWUE4tSUU=
+//profile-update-interval: 1
+//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531
+//support-url: https://t.me/FineVPNSupport
+//profile-web-page-url: https://finevpn.example
+
+vless://0444647e-6388-4c4b-9847-1fcd5bc101ea@83.141.86.180:443?encryption=none&flow=xtls-rprx-vision&pbk=LPxxKvSEfGrfShtdNl4e9fDrjdwVfwceocYPfCHJix8&security=reality&sid=040175d0947db95a&sni=az-de-01-ut34t1ug.farmerly.cc&type=tcp#🇮🇪 26 - IE - VLESS/REALITY/PBK/SID/VISION - 443
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpSb0FSSkxUbE1KT0ZWSXVR@20.166.121.63:443#🇮🇪 56 - IE - SS/AEAD - 443
+
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTppbXEwdkxpa2JPeDRUSFpQ@20.107.193.38:443#🇮🇪 65 - IE - SS/AEAD - 443
+
+vmess://eyJhZGQiOiAiNTQuMjI5LjE1MS45NyIsICJhaWQiOiAiMCIsICJhbHBuIjogIiIsICJob3N0IjogInRtcy5kaW5ndGFsay5jb20iLCAiaWQiOiAiMjM4N2JmYmMtMTBhNi00YmQ3LWRjNTUtN2NiYTk1NGNlNmU4IiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIvIiwgInBvcnQiOiA1OTIzNiwgInBzIjogIvCfh67wn4eqIDYxIC0gSUUgLSBWTWVzcyAtIDU5MjM2IiwgInNjeSI6ICJhdXRvIiwgInRscyI6ICJub25lIiwgInR5cGUiOiAiaHR0cCIsICJ2IjogIjIiLCAibmFtZSI6ICJ2MmdvIHwg8J+HrvCfh6ogSUUgfCBWTUVTUyB8IDQxNCJ9
+
+vmess://eyJhZGQiOiAibGV2aWtvLWllNjM2NC5zaG9waW5nZ2dnLmlyIiwgImFpZCI6ICIwIiwgImFscG4iOiAiIiwgImZwIjogIiIsICJob3N0IjogIiIsICJpZCI6ICIyMzg3YmZiYy0xMGE2LTRiZDctZGM1NS03Y2JhOTU0Y2U2ZTgiLCAiaW5zZWN1cmUiOiAiMCIsICJuZXQiOiAidGNwIiwgInBhdGgiOiAiLyIsICJwb3J0IjogNTkyMzYsICJwcyI6ICLwn4eu8J+HqiAxNzEgLSBJRSAtIFZNZXNzIC0gNTkyMzYiLCAic2N5IjogImF1dG8iLCAic25pIjogIiIsICJ0bHMiOiAibm9uZSIsICJ0eXBlIjogImh0dHAiLCAidiI6ICIyIiwgIm5hbWUiOiAidjJnbyB8IPCfh67wn4eqIElFIHwgVk1FU1MgfCAzNzAifQ==
+
