@@ -5,29 +5,29 @@
     <style>.title{font:700 23px Arial,sans-serif;fill:#fff}.row{font:13px Arial,sans-serif;fill:#fff}.score{font:12px Arial,sans-serif;fill:#fff}</style>
     <text x="28" y="103" class="row">vless_universal.txt</text>
         <rect x="330" y="82" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="82" width="519.5" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="101" class="score">99.9% · 100%</text><text x="28" y="155" class="row">32.1.txt</text>
+        <rect x="330" y="82" width="519.9" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="101" class="score">100.0% · 100%</text><text x="28" y="155" class="row">32.1.txt</text>
         <rect x="330" y="134" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="134" width="516.5" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="153" class="score">99.3% · 100%</text><text x="28" y="207" class="row">sub.html</text>
+        <rect x="330" y="134" width="516.9" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="153" class="score">99.4% · 100%</text><text x="28" y="207" class="row">sub.html</text>
         <rect x="330" y="186" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="186" width="507.3" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="205" class="score">97.5% · 100%</text><text x="28" y="259" class="row">AllConfigsSub.txt</text>
+        <rect x="330" y="186" width="507.6" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="205" class="score">97.6% · 100%</text><text x="28" y="259" class="row">AllConfigsSub.txt</text>
         <rect x="330" y="238" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="238" width="506.0" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="257" class="score">97.3% · 100%</text><text x="28" y="311" class="row">mix</text>
+        <rect x="330" y="238" width="506.5" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="257" class="score">97.4% · 100%</text><text x="28" y="311" class="row">mix</text>
         <rect x="330" y="290" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="290" width="501.6" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="309" class="score">96.5% · 100%</text><text x="28" y="363" class="row">proxies.txt</text>
+        <rect x="330" y="290" width="502.3" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="309" class="score">96.6% · 100%</text><text x="28" y="363" class="row">proxies.txt</text>
         <rect x="330" y="342" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="342" width="497.3" height="28" fill="#e60023" rx="4"/>
+        <rect x="330" y="342" width="497.1" height="28" fill="#e60023" rx="4"/>
         <text x="862" y="361" class="score">95.6% · 100%</text><text x="28" y="415" class="row">configs.txt</text>
         <rect x="330" y="394" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="394" width="493.0" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="413" class="score">94.8% · 100%</text><text x="28" y="467" class="row">Sub.txt</text>
+        <rect x="330" y="394" width="493.3" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="413" class="score">94.9% · 100%</text><text x="28" y="467" class="row">Sub.txt</text>
         <rect x="330" y="446" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="446" width="488.5" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="465" class="score">93.9% · 100%</text><text x="28" y="519" class="row">persianvpnhub</text>
+        <rect x="330" y="446" width="467.5" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="465" class="score">89.9% · 100%</text><text x="28" y="519" class="row">persianvpnhub</text>
         <rect x="330" y="498" width="520" height="28" fill="#1b1b1b" rx="4"/>
-        <rect x="330" y="498" width="397.5" height="28" fill="#e60023" rx="4"/>
-        <text x="862" y="517" class="score">76.5% · 100%</text></svg>
+        <rect x="330" y="498" width="451.6" height="28" fill="#e60023" rx="4"/>
+        <text x="862" y="517" class="score">86.8% · 100%</text></svg>

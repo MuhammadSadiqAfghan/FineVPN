@@ -76,20 +76,6 @@ proxies:
     short-id: 2fa414c6dd1189db
 - name: proxy-2
   type: vless
-  server: 195.123.213.28
-  port: 443
-  uuid: 02fcc1a4-ee90-4970-8bbb-4ffaa8109d24
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: NMgy1XgCSXExOg6Tg8xG9lCWttMF6sjdpB41lZy6FWo
-    short-id: 5c256336e3b673fa
-- name: proxy-3
-  type: vless
   server: 216.106.185.158
   port: 443
   uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
@@ -101,7 +87,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-4
+- name: proxy-3
   type: vless
   server: kuruish.org
   port: 443
@@ -114,7 +100,91 @@ proxies:
   alpn:
   - h2
   - http/1.1
+- name: proxy-4
+  type: vless
+  server: 147.45.61.144
+  port: 443
+  uuid: 04812b68-47ad-48ee-b96d-ab9127679634
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: s2.frenchymyrsep.click
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: tmiOsPsVgiWU7usQWetCpVdEp3ZTWl9tPY-r399JdCs
+    short-id: b725584749527b07
 - name: proxy-5
+  type: vless
+  server: 171.22.183.167
+  port: 443
+  uuid: 04920673-035c-410d-94e4-5b1469d3fb6f
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: 171.22.183.167
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: proxy-6
+  type: vless
+  server: 82.118.22.161
+  port: 443
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+- name: proxy-7
+  type: vless
+  server: 82.118.22.161
+  port: 443
+  uuid: 05488656-d4bf-4634-8b2e-e4ff5a56c7e2
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: safari
+  reality-opts:
+    public-key: xY1KpNxaIGmi6jfeudYQ_aaLGQqWK_uHStnwUFd2_2E
+    short-id: fa3ea655619a3e78
+- name: proxy-8
+  type: vless
+  server: 47.253.226.114
+  port: 443
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+    short-id: ''
+- name: proxy-9
+  type: vless
+  server: 47.253.226.114
+  port: 443
+  uuid: 055a1ce8-2a16-4a0d-a2c2-22826c9b2413
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc
+    short-id: ''
+- name: proxy-10
   type: vless
   server: 38.145.220.193
   port: 443
@@ -128,21 +198,7 @@ proxies:
   reality-opts:
     public-key: vVI2d7f6Kor_qq5G9dj9Mgl3uzN0aN9EVndPbP3y5GY
     short-id: 446efed1ff571486
-- name: proxy-6
-  type: vless
-  server: 31.56.18.99
-  port: 443
-  uuid: 0ef68b29-266e-4e0a-b935-eaa02975a439
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: play.cloudconsole.ru
-  skip-cert-verify: false
-  client-fingerprint: safari
-  reality-opts:
-    public-key: RtoBkG8dr6pam2Z7bskxQxSlw17C1pDfzYeafDo2nG8
-    short-id: d16188300cd57a53
-- name: proxy-7
+- name: proxy-11
   type: vless
   server: 194.233.67.103
   port: 2053
@@ -155,7 +211,7 @@ proxies:
   reality-opts:
     public-key: un_9X4oh5ODWIcXl_jiuUaox4XOJE7oZpSPWGb46tRI
     short-id: 07a66150eac3db28
-- name: proxy-8
+- name: proxy-12
   type: vless
   server: 38.207.178.28
   port: 20086
@@ -169,7 +225,7 @@ proxies:
   reality-opts:
     public-key: fSVnXtIce23KOtqQjDuwRkNCM3mvWlva7bPNMfODv04
     short-id: ''
-- name: proxy-9
+- name: proxy-13
   type: vless
   server: 159.89.87.21
   port: 28190
@@ -183,7 +239,7 @@ proxies:
   reality-opts:
     public-key: ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno
     short-id: ''
-- name: proxy-10
+- name: proxy-14
   type: vless
   server: 185.95.231.156
   port: 443
@@ -197,7 +253,20 @@ proxies:
   reality-opts:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
     short-id: a3a578ab
-- name: proxy-11
+- name: proxy-15
+  type: vless
+  server: 153.52.85.198
+  port: 443
+  uuid: 26843758-24de-4f76-b5d0-624038e353c4
+  network: tcp
+  tls: true
+  servername: 15d7fft.nl11.h1clayd.click
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: xv6OUZcyzEHXFMTfumuJH-1Rd4NQ0cdmWikek4mm0m4
+    short-id: c71118d9399fb8c2
+- name: proxy-16
   type: vless
   server: 82.118.16.189
   port: 443
@@ -211,7 +280,7 @@ proxies:
   reality-opts:
     public-key: zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4
     short-id: 1e9a49dd374c1191
-- name: proxy-12
+- name: proxy-17
   type: vless
   server: 116.213.43.43
   port: 11106
@@ -225,7 +294,7 @@ proxies:
   reality-opts:
     public-key: -13uTSuqk44pCU0x6yvldaskzyRIlO2ihmDvM0FsBns
     short-id: da12e31124830d42
-- name: proxy-13
+- name: proxy-18
   type: vless
   server: 51.15.16.68
   port: 2053
@@ -238,7 +307,7 @@ proxies:
   reality-opts:
     public-key: nyBUWOwOLHOrVSomGfHaPjt-lgbSGk-XSv89voR6T3o
     short-id: e9272cf492b43a48
-- name: proxy-14
+- name: proxy-19
   type: vless
   server: 179.254.94.184
   port: 443
@@ -252,7 +321,7 @@ proxies:
   reality-opts:
     public-key: q49v36UVMNsNION3nn-cQU6_8VwgM_psm1s5z7XVaWc
     short-id: e6052385636f0700
-- name: proxy-15
+- name: proxy-20
   type: vless
   server: 2.59.183.167
   port: 443
@@ -265,7 +334,7 @@ proxies:
   reality-opts:
     public-key: OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4
     short-id: a1b2c3d4
-- name: proxy-16
+- name: proxy-21
   type: vless
   server: 66.94.113.190
   port: 443
@@ -279,7 +348,7 @@ proxies:
   reality-opts:
     public-key: 02Yg4to3gnD2VkzaE9qBZlhsMqzE_oL5tZETE-8yx1Q
     short-id: 53050dd29221b30f
-- name: proxy-17
+- name: proxy-22
   type: vless
   server: 148.135.86.162
   port: 10000
@@ -293,7 +362,35 @@ proxies:
   reality-opts:
     public-key: DCbnS4mIPc1W2-wI0MGHhykwzf2nVuZvBadErSE6MxU
     short-id: a1b2c3d4
-- name: proxy-18
+- name: proxy-23
+  type: vless
+  server: 45.90.59.15
+  port: 443
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: random
+  reality-opts:
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+- name: proxy-24
+  type: vless
+  server: 45.90.59.15
+  port: 443
+  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
+    short-id: 19253fae84102271
+- name: proxy-25
   type: vless
   server: 177.3.213.177
   port: 8444
@@ -308,7 +405,7 @@ proxies:
   reality-opts:
     public-key: 1hJPKCOTjPXm93o2JEeb-dOuFSkCvHj41uKM6yrP32Q
     short-id: bcefc042d39188e0
-- name: proxy-19
+- name: proxy-26
   type: vless
   server: free-amsterdam-node-1.cloudwidecdn.com
   port: 443
@@ -322,107 +419,9 @@ proxies:
   reality-opts:
     public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
     short-id: 1d86d17709852910
-- name: proxy-20
-  type: vless
-  server: 15.204.97.195
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-21
-  type: vless
-  server: 15.204.97.195
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-22
-  type: vless
-  server: 15.204.97.197
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-23
-  type: vless
-  server: 15.204.97.197
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-24
-  type: vless
-  server: 15.204.97.198
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-25
-  type: vless
-  server: 15.204.97.198
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-26
-  type: vless
-  server: 15.204.97.206
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
 - name: proxy-27
   type: vless
-  server: 15.204.97.206
+  server: 15.204.97.195
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -436,21 +435,7 @@ proxies:
     short-id: '01'
 - name: proxy-28
   type: vless
-  server: 15.204.97.214
-  port: 23576
-  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: fuck.rkn
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-    short-id: '01'
-- name: proxy-29
-  type: vless
-  server: 15.204.97.214
+  server: 15.204.97.195
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -462,9 +447,23 @@ proxies:
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
+- name: proxy-29
+  type: vless
+  server: 15.204.97.197
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
 - name: proxy-30
   type: vless
-  server: 15.204.97.216
+  server: 15.204.97.197
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -478,7 +477,7 @@ proxies:
     short-id: '01'
 - name: proxy-31
   type: vless
-  server: 15.204.97.216
+  server: 15.204.97.198
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -492,7 +491,7 @@ proxies:
     short-id: '01'
 - name: proxy-32
   type: vless
-  server: 15.204.97.219
+  server: 15.204.97.198
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -506,7 +505,7 @@ proxies:
     short-id: '01'
 - name: proxy-33
   type: vless
-  server: 15.204.97.219
+  server: 15.204.97.206
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -520,7 +519,7 @@ proxies:
     short-id: '01'
 - name: proxy-34
   type: vless
-  server: 51.158.206.103
+  server: 15.204.97.206
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -534,7 +533,7 @@ proxies:
     short-id: '01'
 - name: proxy-35
   type: vless
-  server: 51.158.206.103
+  server: 15.204.97.214
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -548,7 +547,7 @@ proxies:
     short-id: '01'
 - name: proxy-36
   type: vless
-  server: 51.158.206.12
+  server: 15.204.97.214
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -556,13 +555,13 @@ proxies:
   tls: true
   servername: fuck.rkn
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
 - name: proxy-37
   type: vless
-  server: 51.158.206.19
+  server: 15.204.97.216
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -576,7 +575,7 @@ proxies:
     short-id: '01'
 - name: proxy-38
   type: vless
-  server: 51.158.206.19
+  server: 15.204.97.216
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -590,7 +589,7 @@ proxies:
     short-id: '01'
 - name: proxy-39
   type: vless
-  server: 51.158.206.20
+  server: 15.204.97.219
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -604,7 +603,7 @@ proxies:
     short-id: '01'
 - name: proxy-40
   type: vless
-  server: 51.158.206.20
+  server: 15.204.97.219
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -618,7 +617,7 @@ proxies:
     short-id: '01'
 - name: proxy-41
   type: vless
-  server: 51.158.206.20
+  server: 51.158.206.103
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -632,7 +631,7 @@ proxies:
     short-id: '01'
 - name: proxy-42
   type: vless
-  server: 51.158.206.25
+  server: 51.158.206.103
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -646,7 +645,7 @@ proxies:
     short-id: '01'
 - name: proxy-43
   type: vless
-  server: 51.158.206.25
+  server: 51.158.206.12
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -654,13 +653,13 @@ proxies:
   tls: true
   servername: fuck.rkn
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
 - name: proxy-44
   type: vless
-  server: 51.158.206.26
+  server: 51.158.206.19
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -674,7 +673,7 @@ proxies:
     short-id: '01'
 - name: proxy-45
   type: vless
-  server: 51.158.206.26
+  server: 51.158.206.19
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -682,13 +681,13 @@ proxies:
   tls: true
   servername: fuck.rkn
   skip-cert-verify: false
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
 - name: proxy-46
   type: vless
-  server: 51.158.206.29
+  server: 51.158.206.19
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -702,7 +701,7 @@ proxies:
     short-id: '01'
 - name: proxy-47
   type: vless
-  server: 51.158.206.34
+  server: 51.158.206.20
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -716,7 +715,7 @@ proxies:
     short-id: '01'
 - name: proxy-48
   type: vless
-  server: 51.158.206.34
+  server: 51.158.206.20
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -730,7 +729,7 @@ proxies:
     short-id: '01'
 - name: proxy-49
   type: vless
-  server: 51.158.206.80
+  server: 51.158.206.20
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -744,7 +743,7 @@ proxies:
     short-id: '01'
 - name: proxy-50
   type: vless
-  server: 51.158.206.80
+  server: 51.158.206.25
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -758,7 +757,7 @@ proxies:
     short-id: '01'
 - name: proxy-51
   type: vless
-  server: 51.158.206.86
+  server: 51.158.206.25
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -766,13 +765,13 @@ proxies:
   tls: true
   servername: fuck.rkn
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
 - name: proxy-52
   type: vless
-  server: 51.158.206.87
+  server: 51.158.206.26
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -786,7 +785,7 @@ proxies:
     short-id: '01'
 - name: proxy-53
   type: vless
-  server: 51.158.206.8
+  server: 51.158.206.26
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -794,13 +793,13 @@ proxies:
   tls: true
   servername: fuck.rkn
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
     public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
     short-id: '01'
 - name: proxy-54
   type: vless
-  server: 51.158.206.8
+  server: 51.158.206.29
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -814,7 +813,7 @@ proxies:
     short-id: '01'
 - name: proxy-55
   type: vless
-  server: 51.158.206.93
+  server: 51.158.206.34
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -828,7 +827,7 @@ proxies:
     short-id: '01'
 - name: proxy-56
   type: vless
-  server: 51.158.206.96
+  server: 51.158.206.34
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -842,7 +841,7 @@ proxies:
     short-id: '01'
 - name: proxy-57
   type: vless
-  server: 51.158.206.96
+  server: 51.158.206.80
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -856,7 +855,7 @@ proxies:
     short-id: '01'
 - name: proxy-58
   type: vless
-  server: 51.158.206.97
+  server: 51.158.206.80
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -870,7 +869,7 @@ proxies:
     short-id: '01'
 - name: proxy-59
   type: vless
-  server: 51.158.206.98
+  server: 51.158.206.86
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -884,7 +883,7 @@ proxies:
     short-id: '01'
 - name: proxy-60
   type: vless
-  server: 62.210.91.10
+  server: 51.158.206.87
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -898,7 +897,7 @@ proxies:
     short-id: '01'
 - name: proxy-61
   type: vless
-  server: 62.210.91.2
+  server: 51.158.206.8
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -912,7 +911,7 @@ proxies:
     short-id: '01'
 - name: proxy-62
   type: vless
-  server: 62.210.91.2
+  server: 51.158.206.8
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -926,7 +925,7 @@ proxies:
     short-id: '01'
 - name: proxy-63
   type: vless
-  server: ww13.levikogjgfdd.ir
+  server: 51.158.206.93
   port: 23576
   uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
   flow: xtls-rprx-vision
@@ -940,6 +939,104 @@ proxies:
     short-id: '01'
 - name: proxy-64
   type: vless
+  server: 51.158.206.96
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-65
+  type: vless
+  server: 51.158.206.96
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-66
+  type: vless
+  server: 51.158.206.97
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-67
+  type: vless
+  server: 51.158.206.98
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-68
+  type: vless
+  server: 62.210.91.10
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-69
+  type: vless
+  server: 62.210.91.2
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-70
+  type: vless
+  server: ww13.levikogjgfdd.ir
+  port: 23576
+  uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: fuck.rkn
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+    short-id: '01'
+- name: proxy-71
+  type: vless
   server: 47.84.226.221
   port: 443
   uuid: 49b91402-f8e3-4390-9d7b-b7eddc2684a4
@@ -952,7 +1049,21 @@ proxies:
   reality-opts:
     public-key: gVQsvRtzd77zlvKW4Gk0dAOJNPRa7cfN1-jVe_AJ8Bo
     short-id: e1c483f9d4437d42
-- name: proxy-65
+- name: proxy-72
+  type: vless
+  server: de1.0a0.uk
+  port: 443
+  uuid: 4b1f802a-1004-4ab1-8f8a-a44c0cb70f87
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: www.apple.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: rrpk5WSvxhvJQeXsGHN74r9umdeyrp76BkkPDjAgBDM
+    short-id: d7f53772804d2cd0
+- name: proxy-73
   type: vless
   server: 87.199.205.28
   port: 443
@@ -966,7 +1077,7 @@ proxies:
   reality-opts:
     public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
     short-id: ef1d3554c652a436
-- name: proxy-66
+- name: proxy-74
   type: vless
   server: 87.199.205.28
   port: 443
@@ -980,7 +1091,7 @@ proxies:
   reality-opts:
     public-key: W-9zyiOq287RtXVTZlTFbSDJ0Mx8joyBLJoA7ZE7eBw
     short-id: ef1d3554c652a436
-- name: proxy-67
+- name: proxy-75
   type: vless
   server: 162.159.254.201
   port: 443
@@ -996,7 +1107,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: proxy-68
+- name: proxy-76
   type: vless
   server: 188.114.98.0
   port: 443
@@ -1012,7 +1123,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: proxy-69
+- name: proxy-77
   type: vless
   server: 188.114.98.0
   port: 443
@@ -1028,7 +1139,7 @@ proxies:
   client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: proxy-70
+- name: proxy-78
   type: vless
   server: 147.93.171.8
   port: 8443
@@ -1044,7 +1155,7 @@ proxies:
   client-fingerprint: firefox
   alpn:
   - http/1.1
-- name: proxy-71
+- name: proxy-79
   type: vless
   server: 198.247.127.131
   port: 443
@@ -1058,7 +1169,7 @@ proxies:
   reality-opts:
     public-key: vmHHRwA9ER6c8dfgtL-gh2HBMCvjySy1xLimqYpLiCI
     short-id: ''
-- name: proxy-72
+- name: proxy-80
   type: vless
   server: 195.123.226.21
   port: 443
@@ -1072,7 +1183,7 @@ proxies:
   reality-opts:
     public-key: rabtI-ymNXBUvYYRwAw8DiR-1pdP7U0WPIaCBHEkgzo
     short-id: 77bb0d07bddbc832
-- name: proxy-73
+- name: proxy-81
   type: vless
   server: 158.101.151.157
   port: 443
@@ -1086,7 +1197,7 @@ proxies:
   reality-opts:
     public-key: 99eQkMBHqOEKororOWKFlmH8M0o9VaVpV9w1vQIxhz8
     short-id: 684c7531e599dec0
-- name: proxy-74
+- name: proxy-82
   type: vless
   server: 103.106.229.177
   port: 21004
@@ -1099,7 +1210,20 @@ proxies:
   reality-opts:
     public-key: IRaSB0ImgMO7fsrIbh9i3Pz-bgo5F1jKeC51Fpfs9AA
     short-id: 4e0418d648f86141
-- name: proxy-75
+- name: proxy-83
+  type: vless
+  server: in.smrtai.top
+  port: 443
+  uuid: 6bdc8320-7eae-46fc-be08-f5f54e65dfc8
+  network: tcp
+  tls: true
+  servername: www.cloudflare.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: 3LbVuwKpQv55GngyRhvGl9KyAHIDAgvJx_VRM5mUD2Q
+    short-id: 6bdc8320
+- name: proxy-84
   type: vless
   server: jdwabxe.cvewfjg.shop
   port: 443
@@ -1113,7 +1237,7 @@ proxies:
   reality-opts:
     public-key: HyVSZ2OyySwXT-xRhTAqoiuYflIaj_b0Jxm7S1Iq9hs
     short-id: 7a76f3c4b9dd
-- name: proxy-76
+- name: proxy-85
   type: vless
   server: 2.24.124.64
   port: 443
@@ -1127,7 +1251,23 @@ proxies:
   reality-opts:
     public-key: zpXR6Y36C8qUCIVk2p_j8C9KGeBk5xisLw66j3WFOls
     short-id: 9f1fc5a631ef3126
-- name: proxy-77
+- name: proxy-86
+  type: vless
+  server: mintleaf.moltex.click
+  port: 443
+  uuid: 749b1c56-e658-4bf5-94bd-5c3286a4aed1
+  network: ws
+  ws-opts:
+    path: /api/de4/stream
+    headers:
+      Host: mintleaf.moltex.click
+  tls: true
+  servername: mintleaf.moltex.click
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  alpn:
+  - http/1.1
+- name: proxy-87
   type: vless
   server: 152.228.139.33
   port: 51671
@@ -1142,7 +1282,7 @@ proxies:
   reality-opts:
     public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
     short-id: 2fed44d8c59f7e71
-- name: proxy-78
+- name: proxy-88
   type: vless
   server: 195.123.245.241
   port: 443
@@ -1156,7 +1296,7 @@ proxies:
   reality-opts:
     public-key: hlY5ce1UsVIgE46y5PlEZhUsSaXUnCtoDLLaGrhInjw
     short-id: 23d0950d60bc0d5b
-- name: proxy-79
+- name: proxy-89
   type: vless
   server: 91.107.185.86
   port: 16893
@@ -1169,7 +1309,7 @@ proxies:
   reality-opts:
     public-key: dpmXAfLC6-Sf6cPjkQKGx_NliRQRFZ_oUiiPA5ALW0I
     short-id: 849711f2b99d1176
-- name: proxy-80
+- name: proxy-90
   type: vless
   server: 152.228.139.33
   port: 35108
@@ -1184,7 +1324,7 @@ proxies:
   reality-opts:
     public-key: X_lOw5Zz4SJBa1cRHV4dAq5msYE-ClY5-WNcBmBWRxg
     short-id: 52add08b86a5ccea
-- name: proxy-81
+- name: proxy-91
   type: vless
   server: 50.7.159.242
   port: 443
@@ -1197,35 +1337,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-82
-  type: vless
-  server: 144.31.125.60
-  port: 443
-  uuid: 9015f0bc-2053-4ca1-9b9b-a018b97b32d2
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.intel.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: SVgtyuD9khylgHuB0treGekxVSHPOS-wPZTNHUf6zj8
-    short-id: 85c86a9863
-- name: proxy-83
-  type: vless
-  server: 47.251.108.158
-  port: 443
-  uuid: 975fc322-6e38-434b-a53c-d39fed49b9a9
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  skip-cert-verify: false
-  client-fingerprint: qq
-  reality-opts:
-    public-key: SmgYcFIvvFXW3xh4gvGhIJuQsaZvWkAylcjB6TEddEs
-    short-id: 896f52ba2cfca903
-- name: proxy-84
+- name: proxy-92
   type: vless
   server: 138.124.37.196
   port: 443
@@ -1239,7 +1351,21 @@ proxies:
   reality-opts:
     public-key: r7gK1xDtZl5wDL59Teyw--KXacW1EjOT2mm0MdwY7gM
     short-id: 39b7084197ed8260
-- name: proxy-85
+- name: proxy-93
+  type: vless
+  server: 185.141.34.93
+  port: 443
+  uuid: 9c69546a-e435-4037-bc63-f9e5829a8be3
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: static.lormit.digital
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: k_DjUz2cP6QGuDVwyvTrk3QTuJVntXCPjxJmO-UZchI
+    short-id: 9f07e56cfce2b9a3
+- name: proxy-94
   type: vless
   server: 207.244.243.12
   port: 443
@@ -1253,7 +1379,7 @@ proxies:
   reality-opts:
     public-key: 7pnL_m6XftDfRH5Lue-2zI1a0XWg-xcQd5F8m5lqChg
     short-id: d5f348390b201e86
-- name: proxy-86
+- name: proxy-95
   type: vless
   server: 199.7.140.201
   port: 443
@@ -1266,7 +1392,7 @@ proxies:
   reality-opts:
     public-key: LRAkgKlj5BPtVAGEIZfO5LvDZ5Eg91X0CBKIYhBC1jE
     short-id: ''
-- name: proxy-87
+- name: proxy-96
   type: vless
   server: 82.118.19.153
   port: 443
@@ -1280,7 +1406,7 @@ proxies:
   reality-opts:
     public-key: Tiuy8om5Lk0pWL95-8LaFFTwH0vbURVMoOkaW9xGaiE
     short-id: 670ed9f350bd8ee0
-- name: proxy-88
+- name: proxy-97
   type: vless
   server: 138.124.86.230
   port: 48115
@@ -1295,48 +1421,21 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-89
+- name: proxy-98
   type: vless
-  server: 2.29.62.181
+  server: 130.12.242.106
   port: 443
-  uuid: b63bc3fe-8852-4ead-8d25-8d8d5bae79ae
+  uuid: bc058e69-0444-4c7b-98da-bd67f0b143da
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: api.steampowered.com
+  servername: deepl.com
   skip-cert-verify: false
   client-fingerprint: chrome
   reality-opts:
-    public-key: 4hAezOnHPiz2LUH0NBpS7KmGVd7-AyOODfHWwyQ50kM
-    short-id: fdea6c48da968d75
-- name: proxy-90
-  type: vless
-  server: 109.176.202.177
-  port: 443
-  uuid: b92fa8ab-5a4b-4202-8e2d-af8e8b332193
-  network: tcp
-  tls: true
-  servername: delivery.mp.microsoft.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: 4YuPm6_B_Aa9Um70LtKFnVfA_F8uiwwmXChE_pyXjX8
-    short-id: ec77cd113fc57140
-- name: proxy-91
-  type: vless
-  server: 209.200.246.148
-  port: 443
-  uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: www.cloudflare.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk
-    short-id: f98843107912e782
-- name: proxy-92
+    public-key: vnjp7zIK2H3CGdjSis_79KXqS6IG-opmpbETPUD-EC8
+    short-id: 15affa0af66dfc79
+- name: proxy-99
   type: vless
   server: 83.243.86.189
   port: 443
@@ -1349,22 +1448,7 @@ proxies:
   reality-opts:
     public-key: jfPQXsfvAIZNCDFvW_W3n3Akt6HJv1GD6XaWSApmPGk
     short-id: 3d6eb45b18abfd6a
-- name: proxy-93
-  type: vless
-  server: 15b171g.nl7.h1clayd.click
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 5b79e8a94241
-  tls: true
-  servername: 15b171g.nl7.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE
-    short-id: 50a749f0eccb628c
-- name: proxy-94
+- name: proxy-100
   type: vless
   server: 169.40.42.89
   port: 443
@@ -1378,7 +1462,7 @@ proxies:
   reality-opts:
     public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
     short-id: c39cc7310a
-- name: proxy-95
+- name: proxy-101
   type: vless
   server: mail1.besttotaldns.com
   port: 443
@@ -1392,49 +1476,34 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-96
+- name: proxy-102
   type: vless
-  server: 138.124.125.193
-  port: 10444
-  uuid: e57ce64d-5a1a-4a90-96df-9e1bd3ad26e4
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: ads.x5.ru
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-- name: proxy-97
-  type: vless
-  server: 201.58.178.197
+  server: 166.0.25.92
   port: 443
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
-  flow: xtls-rprx-vision
-  network: tcp
-  tls: true
-  servername: lesson4.schoolpizorbz.xyz
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: EUuZAVtneL8O7MgjETmHvOyInaxqJu2RD6hiFQdDPwk
-    short-id: 0df067145606c0b0
-- name: proxy-98
-  type: vless
-  server: 205.186.112.19
-  port: 443
-  uuid: f1a04d4c-56b3-4f93-a4ec-91a5039a48bd
+  uuid: ea240abb-cbff-4250-a7e2-81fead273be4
   flow: xtls-rprx-vision
   network: tcp
   tls: true
   servername: www.amazon.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   reality-opts:
-    public-key: cwao9PnlNhUTd19WxIKAOdAjkaqVJihY0d2WOR8I2WY
-    short-id: cce23a6bce3bc925
-- name: proxy-99
+    public-key: sM_GJx22-fLTXSSyhHKWZGwUUlRajZLXgg7JXo8l0gs
+    short-id: f616956add605348
+- name: proxy-103
+  type: vless
+  server: 196.198.111.166
+  port: 8443
+  uuid: f121ffc8-f6dc-4728-a871-a05e3f9cf8c5
+  flow: xtls-rprx-vision
+  network: tcp
+  tls: true
+  servername: usr-6b09ce88-api-v3.alcors.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  alpn:
+  - h2
+- name: proxy-104
   type: vless
   server: 5.180.27.134
   port: 443
@@ -1448,1104 +1517,1070 @@ proxies:
   reality-opts:
     public-key: qljbddkyGqBkkOnPdvgw4s6HX_iyEUB2qesNM1qiFg0
     short-id: 36f3c7
-- name: proxy-100
+- name: proxy-105
   type: vless
-  server: 191.217.215.228
-  port: 2053
-  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
+  server: 188.225.77.71
+  port: 443
+  uuid: faf6b8af-e741-4ef5-b1e2-25a3f413cc8e
   flow: xtls-rprx-vision
   network: tcp
   tls: true
-  servername: 191.217.215.228
+  servername: spb2.b2ai.top
   skip-cert-verify: false
   client-fingerprint: firefox
   alpn:
   - h2
   - http/1.1
-- name: proxy-101
-  type: vless
-  server: 191.217.215.228
-  port: 2096
-  uuid: fbe22815-0718-4eae-816f-e91c67d15b54
-  network: ws
-  ws-opts:
-    path: /cdn/v3/live
-    headers:
-      Host: st3b6e5.rumedia-cdn.com
-  tls: true
-  servername: st3b6e5.rumedia-cdn.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: proxy-102
+- name: proxy-106
   type: ss
   server: 27.124.5.86
   port: 8388
   cipher: 2022-blake3-aes-256-gcm
   password: j4DddfVh3zON1s3Wfbmdn2WWhLCWAaOJyKqdeKvxh4A=
-- name: proxy-103
+- name: proxy-107
   type: ss
   server: jp-telegram-khp25-viber-09773510813.premiumx.giize.com
   port: 1080
   cipher: chacha20-ietf-poly1305
   password: 53dea5063dff45e4961fb9cba5d3f83a
-- name: proxy-104
+- name: proxy-108
   type: ss
   server: 108.181.88.2
   port: 443
   cipher: chacha20-ietf-poly1305
   password: 6yzcGxLalx0T
-- name: proxy-105
+- name: proxy-109
   type: ss
   server: 156.67.120.205
   port: 51628
   cipher: chacha20-ietf-poly1305
   password: 29ZZXVa34x7sC48w9FKQ54UKHiJJGTVgKFppBRgviLrVCAYVVyKZdD3obbpjCyk31V5b2G2d7xzqmaPBFdcheCVB9UQ4ZghF
-- name: proxy-106
+- name: proxy-110
   type: ss
   server: 23.162.152.245
   port: 443
   cipher: chacha20-ietf-poly1305
   password: ySGkGhr2sKHV
-- name: proxy-107
+- name: proxy-111
   type: ss
   server: leviko-fr1459.shopingggg.ir
   port: 443
   cipher: chacha20-ietf-poly1305
   password: ySGkGhr2sKHV
-- name: proxy-108
-  type: ss
-  server: 185.213.23.63
-  port: 990
-  cipher: chacha20-ietf-poly1305
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-- name: proxy-109
+- name: proxy-112
   type: ss
   server: 152.53.1.57
   port: 8388
   cipher: chacha20-ietf-poly1305
   password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-- name: proxy-110
+- name: proxy-113
   type: ss
-  server: 67.220.73.247
-  port: 443
+  server: 85.155.226.213
+  port: 2089
   cipher: chacha20-ietf-poly1305
-  password: DGjtV63aPW3E
-- name: proxy-111
+  password: DVlt-OeAV4RiLMwT9e0T72nnFtMG2W3o
+- name: proxy-114
   type: ss
   server: 138.197.89.234
   port: 28960
   cipher: chacha20-ietf-poly1305
   password: DZRy4Q3QH0jUGfKFl2jDCZ
-- name: proxy-112
+- name: proxy-115
+  type: ss
+  server: 85.155.226.213
+  port: 2089
+  cipher: chacha20-ietf-poly1305
+  password: R02KmzzSD7PeZ_DosF87xZ7zIn8jLtyP
+- name: proxy-116
   type: ss
   server: 38.99.82.34
   port: 443
   cipher: chacha20-ietf-poly1305
   password: TyWIy6paiFUX
-- name: proxy-113
+- name: proxy-117
   type: ss
   server: 102.133.165.160
   port: 16233
   cipher: chacha20-ietf-poly1305
   password: Xsy8Ox4yOV3xLlpxtjzs3X
-- name: proxy-114
+- name: proxy-118
   type: ss
-  server: waic.pro.main.sys-metric-report.com
-  port: 28014
+  server: us1.ssobfs.site
+  port: 8388
   cipher: chacha20-ietf-poly1305
-  password: abc62f00-95a8-4c2e-a85d-36a2cdc977da
-- name: proxy-115
+  password: YTA1N
+- name: proxy-119
   type: ss
   server: 198.98.53.130
   port: 443
   cipher: chacha20-ietf-poly1305
   password: eDfN7SODQceIOmIAbtJJtK
-- name: proxy-116
+- name: proxy-120
   type: ss
   server: 23.230.52.119
   port: 42878
   cipher: chacha20-ietf-poly1305
   password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
-- name: proxy-117
+- name: proxy-121
   type: ss
   server: news.bushyjenz.cyou
   port: 42878
   cipher: chacha20-ietf-poly1305
   password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
-- name: proxy-118
+- name: proxy-122
   type: ss
   server: 82.38.31.179
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-119
+- name: proxy-123
   type: ss
   server: 82.38.31.180
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-120
+- name: proxy-124
   type: ss
   server: 82.38.31.181
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-121
+- name: proxy-125
   type: ss
   server: 82.38.31.182
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-122
+- name: proxy-126
   type: ss
   server: 82.38.31.183
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-123
+- name: proxy-127
   type: ss
   server: 82.38.31.184
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-124
-  type: ss
-  server: 82.38.31.185
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-125
-  type: ss
-  server: 82.38.31.186
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-126
-  type: ss
-  server: 82.38.31.187
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-127
+- name: proxy-128
   type: ss
   server: 82.38.31.189
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-128
+- name: proxy-129
   type: ss
   server: 82.38.31.190
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-129
+- name: proxy-130
   type: ss
   server: 82.38.31.191
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-130
+- name: proxy-131
   type: ss
   server: 82.38.31.192
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-131
+- name: proxy-132
   type: ss
   server: 82.38.31.193
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-132
-  type: ss
-  server: 82.38.31.194
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
 - name: proxy-133
-  type: ss
-  server: 82.38.31.195
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-134
   type: ss
   server: 82.38.31.198
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-135
+- name: proxy-134
   type: ss
   server: 82.38.31.199
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-136
+- name: proxy-135
   type: ss
   server: 82.38.31.200
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-137
+- name: proxy-136
   type: ss
   server: 82.38.31.201
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-138
+- name: proxy-137
   type: ss
   server: 82.38.31.202
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-139
+- name: proxy-138
   type: ss
   server: 82.38.31.203
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-140
+- name: proxy-139
   type: ss
   server: 82.38.31.204
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-141
+- name: proxy-140
   type: ss
   server: 82.38.31.205
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-142
-  type: ss
-  server: 82.38.31.206
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-143
-  type: ss
-  server: 82.38.31.207
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-144
-  type: ss
-  server: 82.38.31.208
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-145
+- name: proxy-141
   type: ss
   server: 82.38.31.210
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-146
+- name: proxy-142
+  type: ss
+  server: 82.38.31.211
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+- name: proxy-143
   type: ss
   server: 82.38.31.212
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-147
+- name: proxy-144
   type: ss
   server: 82.38.31.213
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-148
+- name: proxy-145
   type: ss
   server: 82.38.31.214
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-149
+- name: proxy-146
   type: ss
   server: 82.38.31.215
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-150
+- name: proxy-147
   type: ss
   server: 82.38.31.216
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-151
+- name: proxy-148
   type: ss
   server: 82.38.31.217
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-152
+- name: proxy-149
   type: ss
   server: 82.38.31.218
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-153
+- name: proxy-150
   type: ss
   server: 82.38.31.219
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-- name: proxy-154
+- name: proxy-151
   type: ss
   server: 82.38.31.157
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-155
+- name: proxy-152
   type: ss
   server: 82.38.31.162
   port: 443
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-156
+- name: proxy-153
   type: ss
   server: 82.38.31.165
   port: 443
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-157
+- name: proxy-154
   type: ss
   server: 82.38.31.35
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-158
+- name: proxy-155
   type: ss
   server: 82.38.31.46
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-159
+- name: proxy-156
   type: ss
   server: 82.38.31.47
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-160
+- name: proxy-157
   type: ss
   server: 82.38.31.48
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-161
+- name: proxy-158
   type: ss
   server: 82.38.31.49
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-162
+- name: proxy-159
   type: ss
   server: 82.38.31.61
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-163
+- name: proxy-160
   type: ss
   server: 82.38.31.62
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-164
+- name: proxy-161
   type: ss
   server: 82.38.31.66
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: oZIoA69Q8yhcQV8ka3Pa3A
-- name: proxy-165
+- name: proxy-162
   type: ss
   server: 108.181.121.170
   port: 443
   cipher: chacha20-ietf-poly1305
   password: qItG8SueYQcP
-- name: proxy-166
+- name: proxy-163
   type: ss
   server: 168.138.205.100
   port: 53758
   cipher: aes-128-gcm
   password: Bwlqh7GcFB
-- name: proxy-167
+- name: proxy-164
   type: ss
   server: jpa.123069.xyz
   port: 53758
   cipher: aes-128-gcm
   password: Bwlqh7GcFB
+- name: proxy-165
+  type: ss
+  server: 141.98.101.178
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: proxy-166
+  type: ss
+  server: 141.98.101.179
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+- name: proxy-167
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: proxy-168
   type: ss
-  server: 149.22.87.204
+  server: 141.98.101.182
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-169
   type: ss
-  server: 149.22.87.240
+  server: 149.22.87.204
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-170
   type: ss
-  server: 149.22.87.241
+  server: 149.22.87.240
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-171
   type: ss
-  server: 149.22.95.183
+  server: 149.22.87.241
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-172
   type: ss
-  server: 156.146.38.168
+  server: 149.22.95.183
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-173
   type: ss
-  server: 156.146.38.169
+  server: 156.146.38.168
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-174
   type: ss
-  server: 156.146.38.170
+  server: 156.146.38.169
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-175
   type: ss
-  server: 158.173.24.73
+  server: 156.146.38.170
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-176
   type: ss
-  server: 173.244.56.6
+  server: 158.173.24.73
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-177
   type: ss
-  server: 173.244.56.9
+  server: 173.244.56.6
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-178
   type: ss
-  server: 37.19.198.160
+  server: 173.244.56.9
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-179
   type: ss
-  server: 37.19.198.236
+  server: 37.19.198.160
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-180
   type: ss
-  server: 37.19.198.243
+  server: 37.19.198.236
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-181
   type: ss
-  server: 37.19.198.244
+  server: 37.19.198.243
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
 - name: proxy-182
   type: ss
-  server: 47.74.0.207
-  port: 5555
-  cipher: aes-256-gcm
-  password: '123456'
+  server: 37.19.198.244
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
 - name: proxy-183
   type: ss
-  server: 47.74.24.29
+  server: 47.74.0.207
   port: 5555
   cipher: aes-256-gcm
   password: '123456'
 - name: proxy-184
   type: ss
-  server: 47.91.2.13
+  server: 47.74.40.243
   port: 5555
   cipher: aes-256-gcm
   password: '123456'
 - name: proxy-185
   type: ss
-  server: 8.216.8.185
+  server: 47.74.9.21
   port: 5555
   cipher: aes-256-gcm
   password: '123456'
 - name: proxy-186
   type: ss
+  server: 47.91.2.13
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+- name: proxy-187
+  type: ss
+  server: 47.91.31.150
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+- name: proxy-188
+  type: ss
+  server: 8.211.132.94
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+- name: proxy-189
+  type: ss
+  server: 8.216.18.173
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+- name: proxy-190
+  type: ss
+  server: 8.216.9.41
+  port: 5555
+  cipher: aes-256-gcm
+  password: '123456'
+- name: proxy-191
+  type: ss
   server: 185.226.172.8
   port: 8008
   cipher: aes-256-gcm
   password: XKFKl2rULjIp74
-- name: proxy-187
+- name: proxy-192
   type: ss
   server: 15.204.246.107
   port: 8888
   cipher: aes-256-gcm
   password: Y6R9pAtvxxzmGC
-- name: proxy-188
+- name: proxy-193
   type: ss
   server: 137.184.89.151
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-189
+- name: proxy-194
   type: ss
   server: 138.199.55.243
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-190
+- name: proxy-195
   type: ss
   server: 142.202.51.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-191
+- name: proxy-196
   type: ss
   server: 149.40.57.133
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-192
+- name: proxy-197
   type: ss
   server: 149.40.57.134
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-193
-  type: ss
-  server: 149.40.57.135
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-194
+- name: proxy-198
   type: ss
   server: 149.40.57.138
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-195
+- name: proxy-199
   type: ss
   server: 149.88.106.73
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-196
+- name: proxy-200
   type: ss
   server: 149.88.106.74
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-197
+- name: proxy-201
   type: ss
   server: 149.88.107.47
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-198
+- name: proxy-202
   type: ss
   server: 149.88.107.74
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-199
+- name: proxy-203
   type: ss
   server: 151.241.19.29
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-200
-  type: ss
-  server: 162.251.62.31
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-201
-  type: ss
-  server: 167.17.64.22
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-202
-  type: ss
-  server: 167.17.64.27
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-- name: proxy-203
-  type: ss
-  server: 167.88.63.99
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-204
   type: ss
-  server: 169.197.142.68
+  server: 151.241.19.36
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-205
   type: ss
-  server: 172.111.36.123
+  server: 162.251.62.31
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-206
   type: ss
-  server: 172.111.38.72
+  server: 167.17.64.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-207
   type: ss
-  server: 172.99.189.142
+  server: 167.17.64.27
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-208
   type: ss
-  server: 185.176.204.18
+  server: 167.88.63.99
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-209
   type: ss
-  server: 185.176.206.9
+  server: 169.197.142.68
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-210
   type: ss
-  server: 185.215.132.9
+  server: 172.111.36.123
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-211
   type: ss
-  server: 185.230.230.18
+  server: 172.111.38.72
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-212
   type: ss
-  server: 186.190.215.251
+  server: 172.99.189.142
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-213
   type: ss
-  server: 193.151.160.18
+  server: 185.164.175.81
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-214
   type: ss
-  server: 193.151.160.9
+  server: 185.176.204.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-215
   type: ss
-  server: 193.151.163.18
+  server: 185.176.206.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-216
   type: ss
-  server: 198.244.201.129
+  server: 185.215.132.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-217
   type: ss
-  server: 198.244.202.215
+  server: 185.230.230.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-218
   type: ss
-  server: 202.50.253.18
+  server: 186.190.215.251
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-219
   type: ss
-  server: 202.50.253.27
+  server: 193.151.160.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-220
   type: ss
-  server: 202.50.253.36
+  server: 193.151.160.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-221
   type: ss
-  server: 202.50.253.45
+  server: 193.151.163.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-222
   type: ss
-  server: 202.50.253.54
+  server: 198.244.201.129
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-223
   type: ss
-  server: 202.50.253.63
+  server: 198.244.202.215
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-224
   type: ss
-  server: 202.50.253.72
+  server: 202.50.253.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-225
   type: ss
-  server: 202.50.253.81
+  server: 202.50.253.27
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-226
   type: ss
-  server: 202.50.253.90
+  server: 202.50.253.36
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-227
   type: ss
-  server: 202.50.253.99
+  server: 202.50.253.45
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-228
   type: ss
-  server: 216.106.178.169
+  server: 202.50.253.54
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-229
   type: ss
-  server: 23.150.152.38
+  server: 202.50.253.63
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-230
   type: ss
-  server: 23.162.152.22
+  server: 202.50.253.72
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-231
   type: ss
-  server: 23.166.88.127
+  server: 202.50.253.81
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-232
   type: ss
-  server: 38.109.228.110
+  server: 202.50.253.90
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-233
   type: ss
-  server: 38.114.120.221
+  server: 202.50.253.99
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-234
   type: ss
-  server: 38.121.43.18
+  server: 216.106.178.169
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-235
   type: ss
-  server: 38.121.43.225
+  server: 23.150.152.38
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-236
   type: ss
-  server: 38.121.43.231
+  server: 23.162.152.22
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-237
   type: ss
-  server: 38.128.66.32
+  server: 23.166.88.127
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-238
   type: ss
-  server: 38.22.17.129
+  server: 38.109.228.110
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-239
   type: ss
-  server: 38.22.17.214
+  server: 38.114.120.221
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-240
   type: ss
-  server: 38.22.17.219
+  server: 38.121.43.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-241
   type: ss
-  server: 38.91.100.39
+  server: 38.121.43.225
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-242
   type: ss
-  server: 38.91.107.188
+  server: 38.121.43.231
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-243
   type: ss
-  server: 45.86.51.18
+  server: 38.128.66.32
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-244
   type: ss
-  server: 57.129.76.233
+  server: 38.22.17.129
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-245
   type: ss
-  server: 82.110.60.9
+  server: 38.22.17.219
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-246
   type: ss
-  server: 84.20.27.183
+  server: 38.91.100.39
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-247
   type: ss
-  server: 95.215.201.18
+  server: 38.91.107.188
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-248
   type: ss
-  server: leviko-ch7340.shopingggg.ir
+  server: 45.86.51.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-249
   type: ss
-  server: leviko-fr5418.shopingggg.ir
+  server: 57.129.76.233
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-250
   type: ss
-  server: leviko-sg3063.shopingggg.ir
+  server: 79.127.184.104
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-251
   type: ss
-  server: 167.88.63.39
+  server: 82.110.60.9
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-252
   type: ss
-  server: 169.197.140.247
+  server: 84.20.27.183
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-253
   type: ss
-  server: 185.215.132.18
+  server: 95.215.201.18
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-254
   type: ss
-  server: 193.108.116.98
+  server: leviko-ch5965.shopingggg.ir
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-255
   type: ss
-  server: 38.22.17.139
+  server: leviko-ch7340.shopingggg.ir
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-256
   type: ss
-  server: 38.91.107.19
+  server: leviko-fr5418.shopingggg.ir
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-257
   type: ss
-  server: 66.163.125.120
+  server: leviko-sg3063.shopingggg.ir
   port: 19999
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: proxy-258
   type: ss
+  server: 167.88.63.39
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-259
+  type: ss
+  server: 169.197.140.247
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-260
+  type: ss
+  server: 185.215.132.18
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-261
+  type: ss
+  server: 193.108.116.98
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-262
+  type: ss
+  server: 38.22.17.139
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-263
+  type: ss
+  server: 38.91.107.19
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-264
+  type: ss
+  server: 66.163.125.120
+  port: 19999
+  cipher: aes-256-gcm
+  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: proxy-265
+  type: ss
+  server: 15.204.247.124
+  port: 2375
+  cipher: aes-256-gcm
+  password: faBAoD54k87UJG7
+- name: proxy-266
+  type: ss
   server: 15.204.233.41
   port: 8882
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: proxy-259
+- name: proxy-267
   type: ss
   server: 15.204.246.108
   port: 8881
   cipher: aes-256-gcm
   password: kDWvXYZoTBcGkC4
-- name: proxy-260
+- name: proxy-268
   type: ss
   server: 184.107.106.77
   port: 8388
   cipher: aes-256-gcm
   password: itzvpn@321
-- name: proxy-261
+- name: proxy-269
   type: ss
-  server: 200.102.179.179
+  server: leviko-it8672.shopingggg.ir
   port: 8388
   cipher: aes-256-gcm
   password: itzvpn@321
-- name: proxy-262
+- name: proxy-270
   type: ss
   server: 135.148.42.13
   port: 8388
   cipher: aes-256-gcm
   password: itzvpn@321
-- name: proxy-263
-  type: ss
-  server: 192.99.151.230
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: proxy-264
-  type: ss
-  server: 57.131.27.21
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-- name: proxy-265
+- name: proxy-271
   type: ss
   server: 15.204.246.111
   port: 5498
   cipher: aes-256-gcm
   password: lGqs95QkFHo2NV
-- name: proxy-266
+- name: proxy-272
   type: ss
   server: 15.204.247.244
   port: 4444
   cipher: aes-256-gcm
   password: pKEW8JPByTVTLtM
-- name: proxy-267
+- name: proxy-273
   type: ss
   server: 51.222.12.127
   port: 445
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: proxy-268
+- name: proxy-274
   type: ss
   server: 51.222.141.125
   port: 445
   cipher: aes-256-gcm
   password: zDNVedRFPQexG9v
-- name: proxy-269
+- name: proxy-275
   type: hysteria2
   server: 185.200.199.179
   port: 54706
   password: Cqx5aT9Zux
   sni: 185.200.199.179
   skip-cert-verify: false
-- name: proxy-270
+- name: proxy-276
   type: hysteria2
   server: 103.115.109.49
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: https://t.me/oneclickvpnkeys
   skip-cert-verify: true
-- name: proxy-271
+- name: proxy-277
   type: hysteria2
   server: 202.146.222.29
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 202.146.222.29
   skip-cert-verify: true
-- name: proxy-272
+- name: proxy-278
   type: hysteria2
   server: vpn-tw-002.fastervpn.world
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   sni: 127.0.0.1
   skip-cert-verify: true
-- name: proxy-273
+- name: proxy-279
   type: hysteria2
   server: 62.210.124.146
   port: 22000
   password: dongtaiwang.com
   sni: www.microsoft.com
   skip-cert-verify: true
-- name: proxy-274
-  type: vmess
-  server: 103.14.27.207
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-- name: proxy-275
-  type: vmess
-  server: 103.88.232.55
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-- name: proxy-276
+- name: proxy-280
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -2553,7 +2588,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-277
+- name: proxy-281
   type: vmess
   server: 23.162.200.198
   port: 18000
@@ -2561,7 +2596,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-278
+- name: proxy-282
   type: vmess
   server: 94.130.237.57
   port: 27154
@@ -2573,69 +2608,9 @@ proxies:
     path: /Telegram=@AmyraxVPN
     headers:
       Host: 94.130.237.57
-- name: proxy-279
-  type: vmess
-  server: 46.105.222.153
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-- name: proxy-280
-  type: vmess
-  server: 46.105.222.157
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-- name: proxy-281
-  type: vmess
-  server: 79.137.99.183
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
-- name: proxy-282
-  type: vmess
-  server: 162.19.82.57
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  network: tcp
-  tls: true
-  servername: xmfhlpy.com
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  alpn:
-  - h2
-  - http/1.1
 - name: proxy-283
   type: vmess
-  server: 46.105.222.156
+  server: 46.105.222.153
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -2650,7 +2625,7 @@ proxies:
   - http/1.1
 - name: proxy-284
   type: vmess
-  server: 91.134.35.72
+  server: 46.105.222.157
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -2665,7 +2640,7 @@ proxies:
   - http/1.1
 - name: proxy-285
   type: vmess
-  server: 46.105.222.155
+  server: 79.137.99.183
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -2680,7 +2655,7 @@ proxies:
   - http/1.1
 - name: proxy-286
   type: vmess
-  server: 142.202.51.42
+  server: 162.19.82.57
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -2695,7 +2670,7 @@ proxies:
   - http/1.1
 - name: proxy-287
   type: vmess
-  server: 188.166.81.135
+  server: 46.105.222.156
   port: 1270
   uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
   alterId: 0
@@ -2710,13 +2685,73 @@ proxies:
   - http/1.1
 - name: proxy-288
   type: vmess
+  server: 91.134.35.72
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: proxy-289
+  type: vmess
+  server: 46.105.222.155
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: proxy-290
+  type: vmess
+  server: 142.202.51.42
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: proxy-291
+  type: vmess
+  server: 188.166.81.135
+  port: 1270
+  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+  alterId: 0
+  cipher: auto
+  network: tcp
+  tls: true
+  servername: xmfhlpy.com
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  alpn:
+  - h2
+  - http/1.1
+- name: proxy-292
+  type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
   uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-289
+- name: proxy-293
   type: vmess
   server: 149.88.23.207
   port: 18000
@@ -2724,7 +2759,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-290
+- name: proxy-294
   type: vmess
   server: 149.88.23.202
   port: 18000
@@ -2732,7 +2767,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-291
+- name: proxy-295
   type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
@@ -2740,7 +2775,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-292
+- name: proxy-296
   type: vmess
   server: 8.222.172.146
   port: 54327
@@ -2750,7 +2785,7 @@ proxies:
   network: ws
   ws-opts:
     path: /pages
-- name: proxy-293
+- name: proxy-297
   type: vmess
   server: 38.22.17.89
   port: 1270
@@ -2765,7 +2800,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-294
+- name: proxy-298
   type: vmess
   server: 167.88.63.39
   port: 1270
@@ -2780,7 +2815,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-295
+- name: proxy-299
   type: vmess
   server: 172.111.36.147
   port: 1270
@@ -2795,7 +2830,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-296
+- name: proxy-300
   type: vmess
   server: 38.22.17.64
   port: 1270
@@ -2810,7 +2845,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-297
+- name: proxy-301
   type: vmess
   server: 38.91.106.182
   port: 1270
@@ -2825,7 +2860,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-298
+- name: proxy-302
   type: vmess
   server: 38.91.107.188
   port: 1270
@@ -2840,7 +2875,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-299
+- name: proxy-303
   type: vmess
   server: 38.91.100.16
   port: 1270
@@ -2855,7 +2890,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-300
+- name: proxy-304
   type: vmess
   server: 67.220.85.46
   port: 18000
@@ -2863,7 +2898,7 @@ proxies:
   alterId: 0
   cipher: aes-128-gcm
   network: tcp
-- name: proxy-301
+- name: proxy-305
   type: vmess
   server: 172.111.38.246
   port: 1270
@@ -2878,7 +2913,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-302
+- name: proxy-306
   type: vmess
   server: 162.251.62.31
   port: 1270
@@ -2893,7 +2928,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-303
+- name: proxy-307
   type: vmess
   server: 38.91.107.84
   port: 1270
@@ -2908,7 +2943,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-304
+- name: proxy-308
   type: vmess
   server: 38.110.1.246
   port: 18000
@@ -2916,7 +2951,15 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-305
+- name: proxy-309
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: proxy-310
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -2924,7 +2967,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-306
+- name: proxy-311
   type: vmess
   server: 84.17.41.2
   port: 18000
@@ -2932,7 +2975,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-307
+- name: proxy-312
   type: vmess
   server: 216.106.182.225
   port: 1270
@@ -2947,7 +2990,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-308
+- name: proxy-313
   type: vmess
   server: 162.251.62.42
   port: 1270
@@ -2962,7 +3005,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-309
+- name: proxy-314
   type: vmess
   server: 162.251.62.44
   port: 1270
@@ -2977,7 +3020,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-310
+- name: proxy-315
   type: vmess
   server: 67.220.74.188
   port: 1270
@@ -2992,7 +3035,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-311
+- name: proxy-316
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -3000,7 +3043,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-312
+- name: proxy-317
   type: vmess
   server: 23.150.152.65
   port: 1270
@@ -3015,7 +3058,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-313
+- name: proxy-318
   type: vmess
   server: 38.64.138.135
   port: 1270
@@ -3030,7 +3073,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-314
+- name: proxy-319
   type: vmess
   server: 46.105.222.153
   port: 1270
@@ -3045,7 +3088,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-315
+- name: proxy-320
   type: vmess
   server: 46.105.222.156
   port: 1270
@@ -3060,7 +3103,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-316
+- name: proxy-321
   type: vmess
   server: 62.93.166.184
   port: 1270
@@ -3075,7 +3118,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-317
+- name: proxy-322
   type: vmess
   server: 67.220.85.46
   port: 18000
@@ -3083,19 +3126,31 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-318
+- name: proxy-323
   type: vmess
-  server: 8.222.172.146
-  port: 54327
-  uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: aes-128-gcm
+  network: tcp
+- name: proxy-324
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
   alterId: 0
   cipher: auto
-  network: ws
-  ws-opts:
-    path: /pages
-    headers:
-      Host: 8.222.172.146
-- name: proxy-319
+  network: tcp
+- name: proxy-325
+  type: vmess
+  server: 67.220.95.3
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  cipher: auto
+  network: tcp
+- name: proxy-326
   type: vmess
   server: 84.17.41.2
   port: 18000
@@ -3103,7 +3158,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-320
+- name: proxy-327
   type: vmess
   server: 91.107.169.224
   port: 80
@@ -3114,7 +3169,7 @@ proxies:
   httpupgrade-opts:
     path: /
     host: google.whatsapp.snapp.torob.basalam.dns-look.space.
-- name: proxy-321
+- name: proxy-328
   type: vmess
   server: 91.134.35.72
   port: 1270
@@ -3129,7 +3184,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-322
+- name: proxy-329
   type: vmess
   server: 94.130.237.57
   port: 27154
@@ -3139,7 +3194,7 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: Telegram=@AmyraxVPN
-- name: proxy-323
+- name: proxy-330
   type: vmess
   server: 103.14.27.207
   port: 1270
@@ -3154,7 +3209,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-324
+- name: proxy-331
   type: vmess
   server: 103.88.232.55
   port: 1270
@@ -3169,7 +3224,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-325
+- name: proxy-332
   type: vmess
   server: 119.46.51.45
   port: 37515
@@ -3177,7 +3232,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-326
+- name: proxy-333
   type: vmess
   server: 129.146.77.248
   port: 39495
@@ -3189,7 +3244,7 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: 129.146.77.248
-- name: proxy-327
+- name: proxy-334
   type: vmess
   server: 129.154.61.196
   port: 800
@@ -3197,7 +3252,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-328
+- name: proxy-335
   type: vmess
   server: 134.195.196.211
   port: 18000
@@ -3205,7 +3260,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-329
+- name: proxy-336
   type: vmess
   server: 149.88.107.51
   port: 1270
@@ -3220,7 +3275,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-330
+- name: proxy-337
   type: vmess
   server: 149.88.23.207
   port: 18000
@@ -3228,7 +3283,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-331
+- name: proxy-338
   type: vmess
   server: 149.88.23.202
   port: 18000
@@ -3236,7 +3291,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-332
+- name: proxy-339
   type: vmess
   server: 167.88.63.37
   port: 1270
@@ -3251,7 +3306,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-333
+- name: proxy-340
   type: vmess
   server: 169.197.142.22
   port: 18000
@@ -3259,7 +3314,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-334
+- name: proxy-341
   type: vmess
   server: 172.111.36.244
   port: 1270
@@ -3274,7 +3329,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-335
+- name: proxy-342
   type: vmess
   server: 172.99.189.239
   port: 1270
@@ -3289,7 +3344,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-336
+- name: proxy-343
   type: vmess
   server: 186.190.215.4
   port: 1270
@@ -3304,7 +3359,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-337
+- name: proxy-344
   type: vmess
   server: 193.108.117.61
   port: 1270
@@ -3319,7 +3374,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-338
+- name: proxy-345
   type: vmess
   server: 23.162.152.127
   port: 1270
@@ -3334,7 +3389,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-339
+- name: proxy-346
   type: vmess
   server: 23.162.200.198
   port: 18000
@@ -3342,7 +3397,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-340
+- name: proxy-347
   type: vmess
   server: 38.64.138.187
   port: 1270
@@ -3357,7 +3412,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-341
+- name: proxy-348
   type: vmess
   server: 38.91.100.69
   port: 1270
@@ -3372,7 +3427,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-342
+- name: proxy-349
   type: vmess
   server: 38.91.107.49
   port: 18000
@@ -3380,7 +3435,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-343
+- name: proxy-350
   type: vmess
   server: 38.107.226.5
   port: 1270
@@ -3395,7 +3450,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-344
+- name: proxy-351
   type: vmess
   server: 38.110.1.246
   port: 18000
@@ -3403,7 +3458,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-345
+- name: proxy-352
   type: vmess
   server: 38.128.66.212
   port: 1270
@@ -3418,7 +3473,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-346
+- name: proxy-353
   type: vmess
   server: 38.128.66.241
   port: 1270
@@ -3433,7 +3488,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-347
+- name: proxy-354
   type: vmess
   server: 38.22.17.197
   port: 1270
@@ -3448,7 +3503,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-348
+- name: proxy-355
   type: vmess
   server: 38.22.17.251
   port: 1270
@@ -3463,7 +3518,7 @@ proxies:
   alpn:
   - h2
   - http/1.1
-- name: proxy-349
+- name: proxy-356
   type: vmess
   server: ww11.levikogjgfdd.ir
   port: 18000
@@ -3471,15 +3526,7 @@ proxies:
   alterId: 0
   cipher: auto
   network: tcp
-- name: proxy-350
-  type: vmess
-  server: Ir.wbzo.ir
-  port: 2080
-  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: proxy-351
+- name: proxy-357
   type: vmess
   server: fctwi.xiaoyan.io
   port: 16648
@@ -3491,15 +3538,7 @@ proxies:
     path: /
     headers:
       Host: 86714acc4cc5924e812db1c117db832f.mobgslb.tbcache.com
-- name: proxy-352
-  type: vmess
-  server: ir.wbzo.ir
-  port: 2040
-  uuid: b7e3e8af-d1ca-45da-a95f-8b9ad77398b1
-  alterId: 0
-  cipher: auto
-  network: tcp
-- name: proxy-353
+- name: proxy-358
   type: vmess
   server: leviko-se3307.shopingggg.ir
   port: 1270
@@ -3872,6 +3911,11 @@ proxy-groups:
   - proxy-351
   - proxy-352
   - proxy-353
+  - proxy-354
+  - proxy-355
+  - proxy-356
+  - proxy-357
+  - proxy-358
   - DIRECT
 - name: 🚀 Best Ping
   type: url-test
@@ -4229,6 +4273,11 @@ proxy-groups:
   - proxy-351
   - proxy-352
   - proxy-353
+  - proxy-354
+  - proxy-355
+  - proxy-356
+  - proxy-357
+  - proxy-358
   url: https://www.gstatic.com/generate_204
   interval: 180
   tolerance: 50

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-28T11:02:38.685338",
-  "raw_count": 1190,
-  "valid_count": 1190,
-  "tested_count": 353,
+  "generated_at": "2026-11-28T14:40:26.367994",
+  "raw_count": 1189,
+  "valid_count": 1189,
+  "tested_count": 358,
   "verified_by": [
     "xray",
     "singbox"
@@ -12,10 +12,10 @@
     "singbox": "completed"
   },
   "protocol_counts": {
-    "VLESS": 664,
-    "SS": 296,
+    "VLESS": 668,
+    "SS": 286,
     "HYSTERIA2": 73,
-    "TROJAN": 8,
-    "VMESS": 149
+    "TROJAN": 9,
+    "VMESS": 153
   }
 }
